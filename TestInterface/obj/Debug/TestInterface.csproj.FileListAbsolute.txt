@@ -1,0 +1,82 @@
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\bin\Debug\TestInterface.exe
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\bin\Debug\TestInterface.pdb
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\bin\Debug\TestInterface.exe.config
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.AdminForm.resources
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.Form2.resources
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.Form3.resources
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.Properties.Resources.resources
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.QLDiem.resources
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.QLHD.resources
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.QLKhoa.resources
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.QLSV.resources
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.QLTK.resources
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.csproj.GenerateResource.cache
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.exe
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.pdb
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.csprojAssemblyReference.cache
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.SinhVien.resources
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.LoginForm.resources
+C:\Users\Vinh\Source\Repos\TestInterface\TestInterface\obj\Debug\TestInterface.LogoutForm.resources
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\bin\Debug\TestInterface.exe.config
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\bin\Debug\TestInterface.exe
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\bin\Debug\TestInterface.pdb
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.csprojAssemblyReference.cache
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.AdminForm.resources
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.LoginForm.resources
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.LogoutForm.resources
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.Properties.Resources.resources
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.QLDiem.resources
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.QLHD.resources
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.QLKhoa.resources
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.QLSV.resources
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.QLTK.resources
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.SinhVien.resources
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.csproj.GenerateResource.cache
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.exe
+C:\Users\PC\OneDrive\Desktop\.NET\TestInterface\TestInterface\obj\Debug\TestInterface.pdb
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\bin\Debug\TestInterface.exe.config
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\bin\Debug\TestInterface.exe
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\bin\Debug\TestInterface.pdb
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.csprojAssemblyReference.cache
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.AdminForm.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.HoatDong.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.LoginForm.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.LogoutForm.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.Properties.Resources.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.QLDiem.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.QLHD.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.QLKhoa.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.QLSV.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.QLTK.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.SinhVien.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.csproj.GenerateResource.cache
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.exe
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.pdb
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.TaiKhoan.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.DoiMK.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.DuyetYC.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.Khoa.resources
+C:\Users\Vinh\Desktop\TestInterface\TestInterface\obj\Debug\TestInterface.ThongKe.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\bin\Debug\TestInterface.exe.config
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\bin\Debug\TestInterface.exe
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\bin\Debug\TestInterface.pdb
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.csprojAssemblyReference.cache
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.AdminForm.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.DoiMK.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.DuyetYC.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.HoatDong.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.Khoa.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.LoginForm.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.LogoutForm.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.Properties.Resources.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.QLDiem.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.QLHD.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.QLKhoa.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.QLSV.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.QLTK.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.SinhVien.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.TaiKhoan.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.ThongKe.resources
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.csproj.GenerateResource.cache
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.exe
+C:\Users\PC\OneDrive\Desktop\.NET\Winform App\TestInterface\TestInterface\obj\Debug\TestInterface.pdb
