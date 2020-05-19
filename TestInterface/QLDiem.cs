@@ -34,10 +34,8 @@ namespace TestInterface
                 b.ImageAlign = ContentAlignment.MiddleCenter;
                 b.TextAlign = ContentAlignment.BottomCenter;
                 b.TextImageRelation = TextImageRelation.ImageAboveText;
-            }
 
-            lbKhoa.Location = new Point(panel1.Width * 10 / 100, panel1.Height * 30 / 100);
-            cbbKhoa.Location = new Point(lbKhoa.Location.X + lbKhoa.Width + 10, lbKhoa.Location.Y);
+            }
         }
 
         private void SetPicture()

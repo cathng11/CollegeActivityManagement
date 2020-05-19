@@ -45,7 +45,6 @@ namespace TestInterface
             btnXem.TextAlign = ContentAlignment.BottomCenter;
             btnXem.TextImageRelation = TextImageRelation.ImageAboveText;
 
-            lbSapxep.Location = new Point(panel1.Width * 10 / 100, panel1.Height * 30 / 100);
         }
 
         private void SetPicture()
