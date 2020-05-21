@@ -32,17 +32,17 @@ namespace TestInterface
 
         private void DoiMK_SizeChanged(object sender, EventArgs e)
         {
-            SetView();
+            //SetView();
         }
 
-        private void SetView()
-        {
-            tableLayoutPanel1.Height = this.Height * 60 / 100;
-            tableLayoutPanel1.Width = this.Width * 50 / 100;
-            tableLayoutPanel1.Location = new Point(this.Width * 25 / 100, this.Height * 10 / 100);
+        //private void SetView()
+        //{
+        //    tableLayoutPanel1.Height = this.Height * 60 / 100;
+        //    tableLayoutPanel1.Width = this.Width * 50 / 100;
+        //    tableLayoutPanel1.Location = new Point(this.Width * 25 / 100, this.Height * 10 / 100);
 
-            btnSave.Location = new Point(this.Width * 25 / 100, this.Height * 85 / 100);
-            btnThoat.Location = new Point(btnSave.Location.X + btnSave.Width + this.Width * 10 / 100, this.Height * 85 / 100);
-        }
+        //    btnSave.Location = new Point(this.Width * 25 / 100, this.Height * 85 / 100);
+        //    btnThoat.Location = new Point(btnSave.Location.X + btnSave.Width + this.Width * 10 / 100, this.Height * 85 / 100);
+        //}
     }
 }

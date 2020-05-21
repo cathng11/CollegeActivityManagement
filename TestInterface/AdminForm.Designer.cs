@@ -30,17 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.panelIconBlue = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.btnDangXuat = new System.Windows.Forms.Button();
             this.panelButton = new System.Windows.Forms.Panel();
+            this.panelSelect = new System.Windows.Forms.Panel();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnDuyetYC = new System.Windows.Forms.Button();
             this.btnQLTKhoan = new System.Windows.Forms.Button();
             this.btnQLDiemHD = new System.Windows.Forms.Button();
             this.btnQLHD = new System.Windows.Forms.Button();
             this.btnQLKhoa = new System.Windows.Forms.Button();
-            this.btnQLSV = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,7 +48,9 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.panelSelect = new System.Windows.Forms.Panel();
+            this.panelIconBlue = new System.Windows.Forms.Panel();
+            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnQLSV = new System.Windows.Forms.Button();
             this.panelLeft.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,15 +72,6 @@
             this.panelLeft.Size = new System.Drawing.Size(284, 749);
             this.panelLeft.TabIndex = 0;
             // 
-            // panelIconBlue
-            // 
-            this.panelIconBlue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelIconBlue.BackgroundImage")));
-            this.panelIconBlue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelIconBlue.Location = new System.Drawing.Point(0, 68);
-            this.panelIconBlue.Name = "panelIconBlue";
-            this.panelIconBlue.Size = new System.Drawing.Size(284, 103);
-            this.panelIconBlue.TabIndex = 1;
-            // 
             // panel13
             // 
             this.panel13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel13.BackgroundImage")));
@@ -90,29 +81,8 @@
             this.panel13.Size = new System.Drawing.Size(31, 27);
             this.panel13.TabIndex = 6;
             // 
-            // btnDangXuat
-            // 
-            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDangXuat.FlatAppearance.BorderSize = 0;
-            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Image")));
-            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 706);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnDangXuat.Size = new System.Drawing.Size(284, 43);
-            this.btnDangXuat.TabIndex = 9;
-            this.btnDangXuat.Text = "Đăng xuất";
-            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDangXuat.UseVisualStyleBackColor = true;
-            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
-            // 
             // panelButton
             // 
-            //this.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Bold);
             this.panelButton.Controls.Add(this.panelSelect);
             this.panelButton.Controls.Add(this.btnThongKe);
             this.panelButton.Controls.Add(this.btnDuyetYC);
@@ -126,12 +96,20 @@
             this.panelButton.Size = new System.Drawing.Size(284, 391);
             this.panelButton.TabIndex = 1;
             // 
+            // panelSelect
+            // 
+            this.panelSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(188)))), ((int)(((byte)(6)))));
+            this.panelSelect.Location = new System.Drawing.Point(0, 0);
+            this.panelSelect.Name = "panelSelect";
+            this.panelSelect.Size = new System.Drawing.Size(11, 32);
+            this.panelSelect.TabIndex = 10;
+            // 
             // btnThongKe
             // 
             this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThongKe.FlatAppearance.BorderSize = 0;
             this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,7 +129,7 @@
             this.btnDuyetYC.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDuyetYC.FlatAppearance.BorderSize = 0;
             this.btnDuyetYC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuyetYC.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDuyetYC.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDuyetYC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDuyetYC.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyetYC.Image")));
             this.btnDuyetYC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -171,7 +149,7 @@
             this.btnQLTKhoan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLTKhoan.FlatAppearance.BorderSize = 0;
             this.btnQLTKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLTKhoan.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLTKhoan.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLTKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnQLTKhoan.Image = ((System.Drawing.Image)(resources.GetObject("btnQLTKhoan.Image")));
             this.btnQLTKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -191,7 +169,7 @@
             this.btnQLDiemHD.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLDiemHD.FlatAppearance.BorderSize = 0;
             this.btnQLDiemHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLDiemHD.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLDiemHD.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLDiemHD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnQLDiemHD.Image = ((System.Drawing.Image)(resources.GetObject("btnQLDiemHD.Image")));
             this.btnQLDiemHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,7 +189,7 @@
             this.btnQLHD.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLHD.FlatAppearance.BorderSize = 0;
             this.btnQLHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLHD.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLHD.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLHD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnQLHD.Image = ((System.Drawing.Image)(resources.GetObject("btnQLHD.Image")));
             this.btnQLHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,7 +209,7 @@
             this.btnQLKhoa.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLKhoa.FlatAppearance.BorderSize = 0;
             this.btnQLKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLKhoa.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLKhoa.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLKhoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnQLKhoa.Image = ((System.Drawing.Image)(resources.GetObject("btnQLKhoa.Image")));
             this.btnQLKhoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -246,26 +224,6 @@
             this.btnQLKhoa.UseVisualStyleBackColor = true;
             this.btnQLKhoa.Click += new System.EventHandler(this.btnQLKhoa_Click);
             // 
-            // btnQLSV
-            // 
-            this.btnQLSV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQLSV.FlatAppearance.BorderSize = 0;
-            this.btnQLSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLSV.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnQLSV.Image = ((System.Drawing.Image)(resources.GetObject("btnQLSV.Image")));
-            this.btnQLSV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLSV.Location = new System.Drawing.Point(0, 0);
-            this.btnQLSV.Name = "btnQLSV";
-            this.btnQLSV.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnQLSV.Size = new System.Drawing.Size(284, 38);
-            this.btnQLSV.TabIndex = 0;
-            this.btnQLSV.Text = "Sinh viên";
-            this.btnQLSV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLSV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQLSV.UseVisualStyleBackColor = true;
-            this.btnQLSV.Click += new System.EventHandler(this.btnQLSV_Click);
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
@@ -279,10 +237,11 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(50, 9);
+            this.label2.Location = new System.Drawing.Point(59, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(168, 25);
             this.label2.TabIndex = 2;
@@ -373,13 +332,56 @@
             this.panelChildForm.Size = new System.Drawing.Size(1016, 636);
             this.panelChildForm.TabIndex = 3;
             // 
-            // panelSelect
+            // panelIconBlue
             // 
-            this.panelSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(188)))), ((int)(((byte)(6)))));
-            this.panelSelect.Location = new System.Drawing.Point(0, 0);
-            this.panelSelect.Name = "panelSelect";
-            this.panelSelect.Size = new System.Drawing.Size(11, 32);
-            this.panelSelect.TabIndex = 10;
+            this.panelIconBlue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelIconBlue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelIconBlue.BackgroundImage")));
+            this.panelIconBlue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelIconBlue.Location = new System.Drawing.Point(0, 68);
+            this.panelIconBlue.Name = "panelIconBlue";
+            this.panelIconBlue.Size = new System.Drawing.Size(284, 103);
+            this.panelIconBlue.TabIndex = 1;
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnDangXuat.FlatAppearance.BorderSize = 0;
+            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Image")));
+            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 706);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnDangXuat.Size = new System.Drawing.Size(284, 43);
+            this.btnDangXuat.TabIndex = 9;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // btnQLSV
+            // 
+            this.btnQLSV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQLSV.FlatAppearance.BorderSize = 0;
+            this.btnQLSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLSV.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnQLSV.Image = ((System.Drawing.Image)(resources.GetObject("btnQLSV.Image")));
+            this.btnQLSV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSV.Location = new System.Drawing.Point(0, 0);
+            this.btnQLSV.Name = "btnQLSV";
+            this.btnQLSV.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnQLSV.Size = new System.Drawing.Size(284, 38);
+            this.btnQLSV.TabIndex = 0;
+            this.btnQLSV.Text = "Sinh viên";
+            this.btnQLSV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLSV.UseVisualStyleBackColor = true;
+            this.btnQLSV.Click += new System.EventHandler(this.btnQLSV_Click);
             // 
             // AdminForm
             // 
@@ -407,7 +409,6 @@
 
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnQLSV;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelButton;
         private System.Windows.Forms.Label label2;
@@ -418,14 +419,15 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Button btnDuyetYC;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.Panel panelIconBlue;
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panelSelect;
+        private System.Windows.Forms.Panel panelIconBlue;
+        private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.Button btnQLSV;
     }
 }
