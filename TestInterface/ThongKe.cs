@@ -16,7 +16,6 @@ namespace TestInterface
         {
             InitializeComponent();
         }
-
         private void ThongKe_Load(object sender, EventArgs e)
         {
             this.chart1.Series["Sinh viên"].Points.AddXY("Công nghệ thông tin", 200);

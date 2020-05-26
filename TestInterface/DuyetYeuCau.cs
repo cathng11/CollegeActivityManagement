@@ -16,6 +16,7 @@ namespace TestInterface
         private MyDel _D;
 
         public MyDel D { get => _D; set => _D = value; }
+
         public DuyetYeuCau()
         {
             InitializeComponent();

@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TestInterface
-{
-
+{ 
     public partial class QLDiem : Form
     {
         public delegate void MyDel(Form form);

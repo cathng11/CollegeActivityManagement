@@ -12,6 +12,7 @@ namespace TestInterface
 {
     public partial class ThongKeHD : Form
     {
+
         public ThongKeHD()
         {
             InitializeComponent();

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
+
     public partial class QLHD : Form
     {
         public delegate void MyDel(Form form);
         private MyDel _D;
-
         public MyDel D { get => _D; set => _D = value; }
         public QLHD()
         {

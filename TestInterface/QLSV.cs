@@ -14,7 +14,6 @@ namespace TestInterface
     {
         public delegate void MyDel(Form form);
         private MyDel _D;
-
         public MyDel D { get => _D; set => _D = value; }
         public QLSV()
         {

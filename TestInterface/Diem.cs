@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
+
     public partial class Diem : Form
     {
         public delegate void MyDel(Form form);

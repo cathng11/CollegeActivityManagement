@@ -20,7 +20,6 @@ namespace TestInterface
             InitializeComponent();
         }
 
-
         private void btn_X_Click(object sender, EventArgs e)
         {
             this.Close();

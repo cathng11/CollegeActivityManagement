@@ -16,7 +16,6 @@ namespace TestInterface
         {
             InitializeComponent();
         }
-
         private void btnOK_Click(object sender, EventArgs e)
         {
             Application.Restart();

@@ -26,6 +26,5 @@ namespace TestInterface
                 Application.Run(new Admin());
             }
         }
-           
     }
 }
