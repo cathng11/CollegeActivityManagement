@@ -10,31 +10,34 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
-    public partial class AdminForm : Form
+    public partial class Admin : Form
     {
-        public AdminForm()
+        public Admin()
         {
             InitializeComponent();
-            SetView();
-            panelSelect.Visible = false;
+            //SetView_Khoa();
+            SetView_SV();
         }
 
-        public void SetView()
+        private void SetView_Khoa()
         {
-            int wid = Screen.PrimaryScreen.Bounds.Width * 70 / 100;
-            int hei = Screen.PrimaryScreen.Bounds.Height * 70 / 100;
+            btnDuyetYC.Visible = false;
+            btnQLKhoa.Visible = false;
+            panelButton.SetRow(btnQLHD, 2);
+            panelButton.SetRow(btnQLDiemHD, 3);
+            panelButton.SetRow(btnQLTKhoan, 4);
+            panelButton.SetRow(btnThongKe, 5);
+        }
 
-            this.Width = wid;
-            this.Height = hei;
-
-            panelLeft.Width = wid * 25 / 100;
-            panelButton.Width = panelLeft.Width;
-
-            foreach (Button b in this.panelButton.Controls.OfType<Button>())
-                b.Padding = new Padding(panelButton.Width * 10 / 100, 0, 0, 0);
-
-            btnDangXuat.Padding = new Padding(panelButton.Width * 10 / 100, 0, 0, 0);
-
+        private void SetView_SV()
+        {
+            btnDuyetYC.Visible = false;
+            btnQLKhoa.Visible = false;
+            btnQLSV.Visible = false;
+            btnThongKe.Visible = false;
+            panelButton.SetRow(btnQLHD, 1);
+            panelButton.SetRow(btnQLTKhoan, 2);
+            panelButton.SetRow(btnQLDiemHD, 3);
         }
 
         private Form childForm = null;
@@ -59,12 +62,10 @@ namespace TestInterface
             b.BackColor = Color.FromArgb(203, 188, 6);
         }
 
-        private void btnQLSV_Click(object sender, EventArgs e)
+        private void btnDuyetYC_Click(object sender, EventArgs e)
         {
-            if (childForm != null) childForm.Close();
-
             SelectedButton((Button)sender);
-            openForm(new QLSV());
+            openForm(new DuyetYeuCau());
         }
 
         private void btnQLKhoa_Click(object sender, EventArgs e)
@@ -76,38 +77,37 @@ namespace TestInterface
 
         private void btnQLHD_Click(object sender, EventArgs e)
         {
-            if (childForm != null) childForm.Close();
+            //tableLayoutPanel1.GetCellPosition(panelChildForm)
+            
             SelectedButton((Button)sender);
             openForm(new QLHD());
         }
 
         private void btnQLDiemHD_Click(object sender, EventArgs e)
         {
-            if (childForm != null) childForm.Close();
             SelectedButton((Button)sender);
             openForm(new QLDiem());
         }
+
         private void btnQLTKhoan_Click(object sender, EventArgs e)
         {
-            if (childForm != null) childForm.Close();
             SelectedButton((Button)sender);
             openForm(new QLTK());
-
         }
-        private void btnDuyetYC_Click_1(object sender, EventArgs e)
+
+        private void btnQLSV_Click(object sender, EventArgs e)
         {
             if (childForm != null) childForm.Close();
+
             SelectedButton((Button)sender);
-            openForm(new DuyetYeuCau());
+            openForm(new QLSV());
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            if (childForm != null) childForm.Close();
             SelectedButton((Button)sender);
             openForm(new ThongKe());
         }
-
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
@@ -116,35 +116,11 @@ namespace TestInterface
             if (activeform != null) activeform.Close();
             activeform = logout;
             logout.ShowDialog();
-
-        }
-
-        int mov;
-        int movX; int movY;
-        private void panel2_MouseDown(object sender, MouseEventArgs e)
-        {
-            mov = 1;
-            movX = e.X;
-            movY = e.Y;
-        }
-
-        private void panel2_MouseUp(object sender, MouseEventArgs e)
-        {
-            mov = 0;
-        }
-
-        private void panel2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (mov == 1)
-            {
-                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
-            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)
@@ -152,21 +128,10 @@ namespace TestInterface
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-                SetView();
             }
             else
             {
                 this.WindowState = FormWindowState.Maximized;
-
-                int wid = this.Width;
-                int hei = this.Height;
-                panelLeft.Width = wid * 20 / 100;
-                panelChildForm.Size = new Size(wid * 75 / 10, hei * 75 / 100);
-                panelButton.Width = wid * 20 / 100;
-                foreach (Button b in this.panelButton.Controls.OfType<Button>())
-                    b.Padding = new Padding(panelButton.Width * 10 / 100, 0, 0, 0);
-                btnDangXuat.Padding = new Padding(panelButton.Width * 15 / 100, 0, 0, 0);
-
             }
         }
 
@@ -175,5 +140,24 @@ namespace TestInterface
             this.Close();
         }
 
+        private void Admin_Load(object sender, EventArgs e)
+        {
+            int wid = Screen.PrimaryScreen.Bounds.Width * 80 / 100;
+            int hei = Screen.PrimaryScreen.Bounds.Height * 80 / 100;
+
+            this.Width = wid;
+            this.Height = hei;
+        }
+
+        private void tableLayoutPanel1_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            SolidBrush solidBrush = new SolidBrush(Color.FromArgb(74, 74, 74));
+            if (e.Column == 0 && e.Row == 0)
+                e.Graphics.FillRectangle(solidBrush, e.CellBounds);
+            if (e.Column == 0 && e.Row == 2)
+                e.Graphics.FillRectangle(solidBrush, e.CellBounds);
+            if (e.Column == 1 && e.Row == 1)
+                e.Graphics.FillRectangle(solidBrush, e.CellBounds);
+        }
     }
 }

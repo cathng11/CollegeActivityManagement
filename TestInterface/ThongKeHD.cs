@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
-    public partial class DoiMK : Form
+    public partial class ThongKeHD : Form
     {
-        public delegate void MyDel(Form form);
-        private MyDel _D;
-
-        public MyDel D { get => _D; set => _D = value; }
-
-        public DoiMK()
+        public ThongKeHD()
         {
             InitializeComponent();
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

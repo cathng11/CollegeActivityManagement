@@ -10,32 +10,29 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
+
     public partial class QLDiem : Form
     {
+        public delegate void MyDel(Form form);
+        private MyDel _D;
+
+        public MyDel D { get => _D; set => _D = value; }
         public QLDiem()
         {
             InitializeComponent();
-            SetView();
+            SetView_SV();
         }
 
-        private void QLDiem_SizeChanged(object sender, EventArgs e)
+        private void SetView_SV()
         {
-            SetView(); 
+            btnGiam.Visible = false;
+            btnTang.Visible = false;
+            layoutButton.RowCount = 1;
+        }
+
+        private void QLDiem1_SizeChanged(object sender, EventArgs e)
+        {
             SetPicture();
-        }
-
-        private void SetView()
-        {
-            panel1.Height = this.Height * 15 / 100;
-            panelButton.Width = this.Width * 20 / 100;
-            foreach (Button b in this.panelButton.Controls.OfType<Button>())
-            {
-                b.Height = panelButton.Height * 34 / 100;
-                b.ImageAlign = ContentAlignment.MiddleCenter;
-                b.TextAlign = ContentAlignment.BottomCenter;
-                b.TextImageRelation = TextImageRelation.ImageAboveText;
-
-            }
         }
 
         private void SetPicture()
@@ -55,6 +52,18 @@ namespace TestInterface
         }
 
         private void btnXem_Click(object sender, EventArgs e)
+        {
+            Admin admin = (Admin)Application.OpenForms["Admin"];
+            this.D = new MyDel(admin.openForm);
+            this.D(new Diem());
+        }
+
+        private void btnGiam_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTang_Click(object sender, EventArgs e)
         {
 
         }
