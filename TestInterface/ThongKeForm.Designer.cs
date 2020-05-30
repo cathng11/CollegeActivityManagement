@@ -1,6 +1,6 @@
 ﻿namespace TestInterface
 {
-    partial class ThongKe
+    partial class ThongKeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -105,7 +105,7 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Brown;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(3, 265);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(496, 47);
@@ -115,6 +115,7 @@
             // 
             // chart4
             // 
+            this.chart4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
             chartArea1.Name = "ChartArea1";
             this.chart4.ChartAreas.Add(chartArea1);
             this.chart4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -152,7 +153,7 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Brown;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(3, 265);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(496, 47);
@@ -162,6 +163,7 @@
             // 
             // chart3
             // 
+            this.chart3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
             chartArea2.Name = "ChartArea1";
             this.chart3.ChartAreas.Add(chartArea2);
             this.chart3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -195,6 +197,7 @@
             // 
             // chart2
             // 
+            this.chart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
             chartArea3.Name = "ChartArea1";
             this.chart2.ChartAreas.Add(chartArea3);
             this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -231,7 +234,7 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Brown;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(490, 20);
@@ -241,7 +244,9 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(3, 23);
             this.comboBox1.Name = "comboBox1";
@@ -265,6 +270,7 @@
             // 
             // chart1
             // 
+            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
             chartArea4.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea4);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -289,7 +295,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Brown;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 265);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(496, 47);
@@ -297,15 +303,16 @@
             this.label1.Text = "Số lượng sinh viên";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ThongKe
+            // ThongKeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1016, 636);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ThongKe";
-            this.Text = "QLSV";
+            this.Name = "ThongKeForm";
+            this.Text = "ThongKeForm";
             this.Load += new System.EventHandler(this.ThongKe_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);

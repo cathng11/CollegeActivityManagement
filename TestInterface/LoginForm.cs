@@ -14,7 +14,9 @@ namespace TestInterface
     {
         private bool successLogin;
         public bool SuccessLogin { get => successLogin; private set => successLogin = value; }
+        public string TypeUser { get => typeUser; set => typeUser = value; }
 
+        private string typeUser;
         public LoginForm()
         {
             InitializeComponent();
@@ -29,7 +31,22 @@ namespace TestInterface
         private void button1_Click(object sender, EventArgs e)
         {
             SuccessLogin = true;
-            Close();
+            if (txtUsername.Text == "admin")
+            {
+                TypeUser = "UserAdmin";
+                Close();
+            }
+            else if (txtUsername.Text == "sinhvien")
+            {
+                TypeUser = "UserSinhVien";
+                Close();
+            }
+            else if (txtUsername.Text == "khoa")
+            {
+                TypeUser = "UserKhoa";
+                Close();
+            }
+            else MessageBox.Show("Nhập username!");
         }
     }
 }

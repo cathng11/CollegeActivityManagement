@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
-    public partial class QLHD : Form
+    public partial class QLHDForm : Form
     {
         public delegate void MyDel(Form form);
         private MyDel _D;
 
         public MyDel D { get => _D; set => _D = value; }
-        public QLHD()
+        public QLHDForm()
         {
             InitializeComponent();
-            SetView_SV();
+            //SetView_SV();
         }
 
         private void SetView_SV()
@@ -56,31 +56,38 @@ namespace TestInterface
 
         private void btnXem_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            HoatDong hd = new HoatDong();
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            HoatDongForm hd = new HoatDongForm();
             hd.VisibleButtonSave();
             this.D(hd);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            ConfirmForm cf = new ConfirmForm();
+            cf.ShowDialog();
+            if (cf.ConfirmSuccess)
+            {
+                //delete
+                MessageBox.Show("Xoa/Huy thanh cong");
 
+            }
         }
 
         private void btnTao_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            HoatDong hd = new HoatDong();
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            HoatDongForm hd = new HoatDongForm();
             this.D(hd);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            HoatDong hd = new HoatDong();
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            HoatDongForm hd = new HoatDongForm();
             this.D(hd);
         }
     }

@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
-    public partial class QLKhoa : Form
+    public partial class QLKhoaForm : Form
     {
         public delegate void MyDel(Form form);
         private MyDel _D;
 
         public MyDel D { get => _D; set => _D = value; }
-        public QLKhoa()
+        public QLKhoaForm()
         {
             InitializeComponent();
         }
@@ -44,25 +44,25 @@ namespace TestInterface
 
         private void btnXem_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            Khoa khoa = new Khoa();
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            KhoaForm khoa = new KhoaForm();
             khoa.VisibleButtonSave();
             this.D(khoa);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            this.D(new Khoa());
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            this.D(new KhoaForm());
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            this.D(new Khoa());
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            this.D(new KhoaForm());
         }
     }
 }

@@ -10,18 +10,22 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
-    public partial class DoiMK : Form
+    public partial class KhoaForm : Form
     {
         public delegate void MyDel(Form form);
         private MyDel _D;
 
         public MyDel D { get => _D; set => _D = value; }
 
-        public DoiMK()
+        public KhoaForm()
         {
             InitializeComponent();
         }
 
+        public void VisibleButtonSave()
+        {
+            btnSave.Visible = false;
+        }
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
