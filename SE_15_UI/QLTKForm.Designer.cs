@@ -37,7 +37,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvTaiKhoan = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.lbLoaiTK = new System.Windows.Forms.Label();
             this.cbbLoaiTK = new System.Windows.Forms.ComboBox();
@@ -45,7 +45,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.layoutButton.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTaiKhoan)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -190,7 +190,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dtgvTaiKhoan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Margin = new System.Windows.Forms.Padding(6);
@@ -198,15 +198,15 @@
             this.panel1.Size = new System.Drawing.Size(796, 523);
             this.panel1.TabIndex = 1;
             // 
-            // dataGridView1
+            // dtgvTaiKhoan
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(796, 523);
-            this.dataGridView1.TabIndex = 2;
+            this.dtgvTaiKhoan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
+            this.dtgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvTaiKhoan.Location = new System.Drawing.Point(0, 0);
+            this.dtgvTaiKhoan.Name = "dtgvTaiKhoan";
+            this.dtgvTaiKhoan.Size = new System.Drawing.Size(796, 523);
+            this.dtgvTaiKhoan.TabIndex = 2;
             // 
             // tableLayoutPanel4
             // 
@@ -250,6 +250,7 @@
             this.cbbLoaiTK.Name = "cbbLoaiTK";
             this.cbbLoaiTK.Size = new System.Drawing.Size(237, 21);
             this.cbbLoaiTK.TabIndex = 3;
+            this.cbbLoaiTK.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiTK_SelectedIndexChanged);
             // 
             // QLTKForm
             // 
@@ -266,7 +267,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.layoutButton.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTaiKhoan)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
@@ -287,6 +288,6 @@
         private System.Windows.Forms.Label lbLoaiTK;
         private System.Windows.Forms.ComboBox cbbLoaiTK;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvTaiKhoan;
     }
 }

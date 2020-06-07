@@ -32,10 +32,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\SE_15_DTO\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\SE_15_DTO\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="SE_15_DTO">
+      <HintPath>..\SE_15_DTO\bin\Debug\SE_15_DTO.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,7 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HoatDong_BLL.cs" />
+    <Compile Include="Khoa_BLL.cs" />
+    <Compile Include="LichSuDangNhap_BLL.cs" />
+    <Compile Include="LoaiHoatDong_BLL.cs" />
+    <Compile Include="LoaiTaiKhoan_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SinhVien_BLL.cs" />
+    <Compile Include="TaiKhoan_BLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

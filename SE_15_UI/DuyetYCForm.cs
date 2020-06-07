@@ -37,7 +37,7 @@ namespace SE_15_UI
         {
             DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
             this.D = new MyDel(df.openForm);
-            this.D(new HoatDongForm());
+            this.D(new HoatDongForm("", ""));
         }
     }
 }

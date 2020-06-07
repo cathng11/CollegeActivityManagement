@@ -31,7 +31,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtLoaiTK = new System.Windows.Forms.ComboBox();
+            this.cbbLoaiTK = new System.Windows.Forms.ComboBox();
             this.txtIDChuTK = new System.Windows.Forms.TextBox();
             this.txtTenChuTK = new System.Windows.Forms.TextBox();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
@@ -89,18 +89,18 @@
             this.label12.TabIndex = 20;
             this.label12.Text = "Tên đăng nhập";
             // 
-            // txtLoaiTK
+            // cbbLoaiTK
             // 
-            this.txtLoaiTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
-            this.txtLoaiTK.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtLoaiTK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.txtLoaiTK.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoaiTK.FormattingEnabled = true;
-            this.txtLoaiTK.Location = new System.Drawing.Point(235, 96);
-            this.txtLoaiTK.Margin = new System.Windows.Forms.Padding(0);
-            this.txtLoaiTK.Name = "txtLoaiTK";
-            this.txtLoaiTK.Size = new System.Drawing.Size(365, 21);
-            this.txtLoaiTK.TabIndex = 28;
+            this.cbbLoaiTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
+            this.cbbLoaiTK.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbbLoaiTK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbbLoaiTK.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLoaiTK.FormattingEnabled = true;
+            this.cbbLoaiTK.Location = new System.Drawing.Point(235, 96);
+            this.cbbLoaiTK.Margin = new System.Windows.Forms.Padding(0);
+            this.cbbLoaiTK.Name = "cbbLoaiTK";
+            this.cbbLoaiTK.Size = new System.Drawing.Size(365, 21);
+            this.cbbLoaiTK.TabIndex = 28;
             // 
             // txtIDChuTK
             // 
@@ -212,7 +212,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.66667F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.txtIDChuTK, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtLoaiTK, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cbbLoaiTK, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtTenChuTK, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 1);
@@ -339,7 +339,7 @@
         private System.Windows.Forms.TextBox txtTenChuTK;
         private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.TextBox txtIDTaiKhoan;
-        private System.Windows.Forms.ComboBox txtLoaiTK;
+        private System.Windows.Forms.ComboBox cbbLoaiTK;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SE_15_DTO
 {
-    class Class1
+    public class LichSuDangNhap_DTO
     {
-        //add success
+        public Nullable<System.DateTime> ThoiGianDangNhap { get; set; }
     }
 }

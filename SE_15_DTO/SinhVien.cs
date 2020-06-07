@@ -7,29 +7,34 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SE_15_DAL
+namespace SE_15_DTO
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Khoa
+    public partial class SinhVien
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Khoa()
+        public SinhVien()
         {
-            this.HoatDongs = new HashSet<HoatDong>();
-            this.SinhViens = new HashSet<SinhVien>();
+            this.DangKies = new HashSet<DangKy>();
         }
     
-        public int IDKhoa { get; set; }
-        public string TenKhoa { get; set; }
-        public Nullable<int> SoLuongSV { get; set; }
+        public int IDSinhVien { get; set; }
         public string IDTaiKhoan { get; set; }
+        public Nullable<int> IDKhoa { get; set; }
+        public string TenSinhVien { get; set; }
+        public Nullable<bool> GioiTinh { get; set; }
+        public string Email { get; set; }
+        public string SoDienThoai { get; set; }
+        public string QueQuan { get; set; }
+        public Nullable<System.DateTime> NgaySinh { get; set; }
+        public string DiaChi { get; set; }
+        public Nullable<int> TongDiemHoatDong { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoatDong> HoatDongs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SinhVien> SinhViens { get; set; }
+        public virtual ICollection<DangKy> DangKies { get; set; }
+        public virtual Khoa Khoa { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
     }
 }
