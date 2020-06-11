@@ -20,6 +20,7 @@ namespace SE_15_UI
         {
             InitializeComponent();
         }
+
         private void btnOK_Click(object sender, EventArgs e)
         {
             ConfirmSuccess = true;

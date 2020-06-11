@@ -20,6 +20,7 @@ namespace SE_15_DTO
             this.Admins = new HashSet<Admin>();
             this.Khoas = new HashSet<Khoa>();
             this.LichSuDangNhaps = new HashSet<LichSuDangNhap>();
+            this.LichSuDangNhaps1 = new HashSet<LichSuDangNhap>();
             this.SinhViens = new HashSet<SinhVien>();
         }
     
@@ -34,6 +35,8 @@ namespace SE_15_DTO
         public virtual ICollection<Khoa> Khoas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LichSuDangNhap> LichSuDangNhaps { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LichSuDangNhap> LichSuDangNhaps1 { get; set; }
         public virtual LoaiTaiKhoan LoaiTaiKhoan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SinhVien> SinhViens { get; set; }

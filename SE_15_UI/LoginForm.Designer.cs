@@ -41,6 +41,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblErrorUsername = new System.Windows.Forms.Label();
+            this.lblErrorPassword = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,8 +141,10 @@
             this.txtPassword.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(49, 329);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(215, 19);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtUsername
             // 
@@ -150,6 +155,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(215, 19);
             this.txtUsername.TabIndex = 1;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // label1
             // 
@@ -191,6 +197,35 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(49, 289);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "label6";
+            // 
+            // lblErrorUsername
+            // 
+            this.lblErrorUsername.AutoSize = true;
+            this.lblErrorUsername.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblErrorUsername.Location = new System.Drawing.Point(46, 289);
+            this.lblErrorUsername.Name = "lblErrorUsername";
+            this.lblErrorUsername.Size = new System.Drawing.Size(87, 13);
+            this.lblErrorUsername.TabIndex = 8;
+            this.lblErrorUsername.Text = "Nhập Username!";
+            // 
+            // lblErrorPassword
+            // 
+            this.lblErrorPassword.AutoSize = true;
+            this.lblErrorPassword.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblErrorPassword.Location = new System.Drawing.Point(46, 358);
+            this.lblErrorPassword.Name = "lblErrorPassword";
+            this.lblErrorPassword.Size = new System.Drawing.Size(116, 13);
+            this.lblErrorPassword.TabIndex = 9;
+            this.lblErrorPassword.Text = "Mật khẩu không đúng!";
+            // 
             // LoginForm
             // 
             this.AcceptButton = this.btnLogin;
@@ -198,6 +233,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(117)))), ((int)(((byte)(122)))));
             this.ClientSize = new System.Drawing.Size(300, 450);
+            this.Controls.Add(this.lblErrorPassword);
+            this.Controls.Add(this.lblErrorUsername);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -232,6 +270,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblErrorUsername;
+        private System.Windows.Forms.Label lblErrorPassword;
     }
 }
 

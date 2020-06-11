@@ -32,7 +32,7 @@ namespace SE_15_UI
         public void VisibleButtonSave()
         {
             btnSave.Visible = false;
-            foreach (Control i in this.tableLayoutPanel1.Controls)
+            foreach(Control i in this.tableLayoutPanel1.Controls)
             {
                 i.Enabled = true;
             }
@@ -47,13 +47,60 @@ namespace SE_15_UI
                 txtIDTaiKhoan.Text = tk.IDTaiKhoan;
                 txtTenDangNhap.Text = tk.TenDangNhap;
                 dtgvLichSuDN.DataSource = LichSuDangNhap_BLL.Instance.Get_ByIDTaiKhoan_BLL(tk.IDTaiKhoan);
-                
-                
+                switch (tk.LoaiTaiKhoan.TenLoai)
+                {
+                    case "Admin":
+                        {
+                            cbbLoaiTK.SelectedIndex = 0;
+                            lblTenchuTK.Text = "Tên Admin";
+                            lblIDChuTK.Text = "Mã số Admin";
+                            Admin ad = Admin_BLL.Instance.Get_ByTaiKhoan_BLL(tk.IDTaiKhoan);
+                            try
+                            {
+                                txtIDChuTK.Text = ad.IDAdmin.ToString();
+                                txtTenChuTK.Text = ad.TenAdmin;
+                            }
+                            catch (Exception)
+                            { }
+                            break;
+                        }
+                    case "Khoa":
+                        {
+                            cbbLoaiTK.SelectedIndex = 1;
+                            lblTenchuTK.Text = "Tên khoa";
+                            lblIDChuTK.Text = "Mã số khoa";
+                            Khoa k = Khoa_BLL.Instance.Get_ByTaiKhoan_BLL(tk.IDTaiKhoan);
+                            try
+                            {
+                                txtIDChuTK.Text = k.IDKhoa.ToString();
+                                txtTenChuTK.Text = k.TenKhoa;
+                            }
+                            catch (Exception)
+                            { }
+                            break;
+                        }
+                    case "Sinh viên":
+                        {
+                            cbbLoaiTK.SelectedIndex = 2;
+                            lblTenchuTK.Text = "Tên sinh viên";
+                            lblIDChuTK.Text = "Mã số sinh viên";
+                            SinhVien sv = SinhVien_BLL.Instance.Get_ByTaiKhoan_BLL(tk.IDTaiKhoan);
+                            try
+                            {
+                                txtIDChuTK.Text = sv.IDSinhVien.ToString();
+                                txtTenChuTK.Text = sv.TenSinhVien;
+                            }
+                            catch (Exception)
+                            { }
+                            break;
+                        }
+                }
                 //txtIDTaiKhoan.ReadOnly = true;
             }
             else
             {
-                
+                //txtIDChuTK.ReadOnly = true;
+                //txtTenChuTK.ReadOnly = true;
             }
         }
 
@@ -119,7 +166,7 @@ namespace SE_15_UI
                         IDLoaiTaiKhoan = ((LoaiTaiKhoan_DTO)cbbLoaiTK.SelectedItem).IDLoaiTaiKhoan,
                         MatKhau = tk.MatKhau
                     };
-                    TaiKhoan_BLL.Instance.Edit_BLL(tk.IDTaiKhoan, newTK);
+                    TaiKhoan_BLL.Instance.Edit_BLL(tk, newTK);
 
                     QLTKForm qLTKForm = (QLTKForm)Application.OpenForms["QLTKForm"];
                     D += qLTKForm.ShowTaiKhoan;

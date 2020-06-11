@@ -46,17 +46,21 @@ namespace SE_15_UI
             btnTao.Text = "Đăng ký";
             btnHuy.Text = "Hủy đăng ký";
             layoutButton.SetRow(btnTao, 1);
-            
+            SinhVien sv = SinhVien_BLL.Instance.ShowSV_BLL(Convert.ToInt32(IDSinhVien));
+            string khoa = Khoa_BLL.Instance.Get_ByID_BLL(Convert.ToInt32(sv.IDKhoa)).ToString();
+            cbbKhoa.Text = khoa;
+            cbbKhoa.Enabled = false;
         }
         private void SetCBBKhoa()
         {
             if (TypeUser == "UserAdmin")
             {
-                cbbKhoa.Items.Add(new Khoa_DTO { IDKhoa = 0, TenKhoa = "All", SoLuongSV = 0, TenDangNhap = "" });
+                cbbKhoa.Items.Add(new Khoa_DTO { IDKhoa = 0, TenKhoa = "All", SoLuongSV = 0, TenDangNhap = "" }) ;
                 foreach (Khoa_DTO item in Khoa_BLL.Instance.GetAll_BLL())
                 {
                     cbbKhoa.Items.Add(item);
                 }
+                //cbbKhoa.DisplayMember = "TenKhoa";
                 cbbKhoa.SelectedIndex = 0;
 
             }
@@ -68,7 +72,11 @@ namespace SE_15_UI
                 cbbKhoa.Enabled = false;
             }
             else
-            { 
+            {
+                DashboardForm dashboardForm = (DashboardForm)Application.OpenForms["DashboardForm"];
+                SinhVien sv = SinhVien_BLL.Instance.Get_ByTaiKhoan_BLL(dashboardForm.ID_TK);
+                cbbKhoa.Text = sv.Khoa.TenKhoa;
+                cbbKhoa.Enabled = false;
             }
         }
         public void ShowHoatDongs()
@@ -85,8 +93,35 @@ namespace SE_15_UI
             }
             else
             {
-
+                ResetDataGridView();
+                DashboardForm dashboardForm = (DashboardForm)Application.OpenForms["DashboardForm"];
+                SinhVien sv = SinhVien_BLL.Instance.Get_ByTaiKhoan_BLL(dashboardForm.ID_TK);
+                dtgvHoatDong.DataSource = DangKy_BLL.Instance.GetListDK_BLL(sv.IDKhoa.Value, sv.IDSinhVien);
+                SetData();
             }
+        }
+        private void ResetDataGridView()
+        {
+            dtgvHoatDong.CancelEdit();
+            dtgvHoatDong.Columns.Clear();
+            dtgvHoatDong.DataSource = null;
+        }
+        private void SetData()
+        {
+            dtgvHoatDong.Columns[0].HeaderText = "ID";
+            dtgvHoatDong.Columns[1].HeaderText = "Tên hoạt động";
+            dtgvHoatDong.Columns[2].HeaderText = "ID Sinh viên";
+            dtgvHoatDong.Columns[3].HeaderText = "Thời gian";
+            dtgvHoatDong.Columns[4].HeaderText = "ID đăng ký";
+            dtgvHoatDong.Columns[5].HeaderText = "Trạng thái";
+            dtgvHoatDong.Columns[6].HeaderText = "Ngày đăng ký";
+            dtgvHoatDong.Columns[7].HeaderText = "Ngày huỷ đăng ký";
+
+
+            dtgvHoatDong.Columns[2].Visible = false;
+            dtgvHoatDong.Columns[4].Visible = false;
+
+            dtgvHoatDong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void btnXem_Click(object sender, EventArgs e)
@@ -99,25 +134,132 @@ namespace SE_15_UI
             hd.VisibleButtonSave();
             this.D(hd);
         }
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            if (TypeUser == "UserSinhVien")
+            {
+                if(CheckHuyDK())
+                {
+                    DataGridViewSelectedRowCollection r = dtgvHoatDong.SelectedRows;
+                    DangKy dk = new DangKy
+                    {
+                        IDDangKy = Convert.ToInt32(r[0].Cells[4].Value.ToString()),
+                        IDSinhVien = this.IDSinhVien,
+                        IDHoatDong = r[0].Cells[0].Value.ToString(),
+                        ThoiGianDangKy = Convert.ToDateTime(r[0].Cells[6].Value.ToString()),
+                        ThoiGianHuyDangKy = DateTime.Now,
+                        TrangThai = "Hủy đăng ký"
+                    };
+                    DangKy_BLL.Instance.CancelDK_BLL(dk);
+                    DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+                    this.D = new MyDel(df.openForm);
+                    QLHDForm hd = new QLHDForm(TypeUser, IDSinhVien);
+                    this.D(hd);
+                }
+                else
+                {
+                    MessageBox.Show("Hoạt động này đã huỷ/chưa đăng ký!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                ConfirmForm cf = new ConfirmForm();
+                cf.ShowDialog();
+                if (cf.ConfirmSuccess)
+                {
+                    DataGridViewSelectedRowCollection r = dtgvHoatDong.SelectedRows;
+                    HoatDong_BLL.Instance.Del_BLL(r[0].Cells["Column1"].Value.ToString());
+                    ShowHoatDongs();
+                    MessageBox.Show("Xoa/Huy thanh cong");
+                }
+            }
+
+        }
+        private bool CheckHuyDK()
+        {
+            DataGridViewSelectedRowCollection r = dtgvHoatDong.SelectedRows;
+            if (r[0].Cells[5].Value.ToString() == "Chưa đăng ký")
+            {
+                return false;
+            }
+            if (r[0].Cells[5].Value.ToString() == "Đã huỷ đăng ký")
+            {
+                return false;
+            }
+            return true;
+
+        }
+
+        private bool CheckDK()
+        {
+            DataGridViewSelectedRowCollection r = dtgvHoatDong.SelectedRows;
+            if (r[0].Cells[5].Value.ToString() == "Đã đăng ký")
+            {
+                return false;
+            }
+            return true;
+        }
 
         private void btnTao_Click(object sender, EventArgs e)
         {
-            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
-            this.D = new MyDel(df.openForm);
-            HoatDongForm hd = new HoatDongForm("", typeUser);
-            this.D(hd);
-        }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            ConfirmForm cf = new ConfirmForm();
-            cf.ShowDialog();
-            if (cf.ConfirmSuccess)
+            if(TypeUser=="UserSinhVien")
             {
-                DataGridViewSelectedRowCollection r = dtgvHoatDong.SelectedRows;
-                HoatDong_BLL.Instance.Del_BLL(r[0].Cells["Column1"].Value.ToString());
-                ShowHoatDongs();
-                MessageBox.Show("Xoa/Huy thanh cong");
+                if (CheckDK())
+                {
+                    DataGridViewSelectedRowCollection r = dtgvHoatDong.SelectedRows;
+                    DangKy dangKy = new DangKy();
+                    //Nếu hd là chưa đăng ký thì không có id dk nên try catch
+                    try
+                    {
+                        dangKy = DangKy_BLL.Instance.GetDK_ByID_BLL(Convert.ToInt32(r[0].Cells[4].Value.ToString()));
+                    }
+                    catch (Exception)
+                    {
+                        dangKy = null;
+                    }
+                    if (dangKy == null)
+                    {
+                        DangKy dk = new DangKy
+                        {
+                            IDSinhVien = this.IDSinhVien,
+                            IDHoatDong = r[0].Cells[0].Value.ToString(),
+                            ThoiGianDangKy = DateTime.Now,
+                            ThoiGianHuyDangKy = null,
+                            TrangThai = "Đã đăng ký"
+                        };
+                        DangKy_BLL.Instance.AddDK_BLL(dk);
+                    }
+                    else
+                    {
+                        DangKy dk = new DangKy
+                        {
+                            IDDangKy = Convert.ToInt32(r[0].Cells[4].Value.ToString()),
+                            IDSinhVien = IDSinhVien,
+                            IDHoatDong = r[0].Cells[0].Value.ToString(),
+                            ThoiGianDangKy = DateTime.Now,
+                            ThoiGianHuyDangKy = null,
+                            TrangThai = "Đã đăng ký"
+                        };
+                        DangKy_BLL.Instance.CancelDK_BLL(dk);
+                    }
+
+                    DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+                    this.D = new MyDel(df.openForm);
+                    QLHDForm hd = new QLHDForm(TypeUser, IDSinhVien);
+                    this.D(hd);
+                }
+                else
+                {
+                    MessageBox.Show("Hoạt động này đã đăng ký!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+                this.D = new MyDel(df.openForm);
+                HoatDongForm hd = new HoatDongForm("", typeUser);
+                this.D(hd);
             }
 
         }

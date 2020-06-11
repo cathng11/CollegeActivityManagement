@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SE_15_BLL;
+using SE_15_DTO;
 
 namespace SE_15_UI
 {
     public partial class DashboardForm : Form
     {
-        private string _TypeUser;
-        public string TypeUser { get => _TypeUser; set => _TypeUser = value; }
+        private string typeUser;
+        public string TypeUser { get => typeUser; set => typeUser = value; }
 
         private string _ID_TK;
         public string ID_TK { get => _ID_TK; set => _ID_TK = value; }
@@ -24,11 +26,18 @@ namespace SE_15_UI
             ID_TK = id_TK;
             InitializeComponent();
             if (typeUser == "UserAdmin")
-                //SetView_Admin();
+                SetView_Admin();
             if (typeUser == "UserKhoa")
                 SetView_Khoa();
             if (typeUser == "UserSinhVien")
                 SetView_SV();
+        }
+        
+        private void SetView_Admin()
+        {
+            lbUser.Text = "(Admin)";
+            Admin ad = Admin_BLL.Instance.Get_ByTaiKhoan_BLL(ID_TK);
+            lbNameUser.Text = ad.TenAdmin;
         }
 
         private void SetView_Khoa()
@@ -36,24 +45,18 @@ namespace SE_15_UI
             btnDuyetYC.Visible = false;
             btnQLKhoa.Visible = false;
             lbUser.Text = "(Khoa)";
-
-            //panelButton.SetRow(btnQLHD, 2);
-            //panelButton.SetRow(btnQLDiemHD, 3);
-            //panelButton.SetRow(btnQLTKhoan, 4);
-            //panelButton.SetRow(btnThongKe, 5);
+            Khoa khoa = Khoa_BLL.Instance.Get_ByTaiKhoan_BLL(ID_TK);
+            lbNameUser.Text = khoa.TenKhoa;
         }
 
         private void SetView_SV()
         {
             btnDuyetYC.Visible = false;
             btnQLKhoa.Visible = false;
-            btnQLSV.Visible = false;
             btnThongKe.Visible = false;
             lbUser.Text = "(Sinh viên)";
-
-            //panelButton.SetRow(btnQLHD, 1);
-            //panelButton.SetRow(btnQLTKhoan, 2);
-            //panelButton.SetRow(btnQLDiemHD, 3);
+            SinhVien sv = SinhVien_BLL.Instance.Get_ByTaiKhoan_BLL(ID_TK);
+            lbNameUser.Text = sv.TenSinhVien;
         }
 
         public Form childForm = null;
@@ -112,6 +115,7 @@ namespace SE_15_UI
         private void btnDuyetYC_Click(object sender, EventArgs e)
         {
             lbButton.Text = "Duyệt yêu cầu phê duyệt hoạt động";
+            CloseAllForms();
             SelectedButton((Button)sender);
             openForm(new DuyetYCForm());
         }
@@ -119,7 +123,7 @@ namespace SE_15_UI
         private void btnQLKhoa_Click(object sender, EventArgs e)
         {
             lbButton.Text = "Quản lý khoa";
-            if (childForm != null) childForm.Close();
+            CloseAllForms();
             SelectedButton((Button)sender);
             openForm(new QLKhoaForm());
         }
@@ -127,11 +131,15 @@ namespace SE_15_UI
         private void btnQLHD_Click(object sender, EventArgs e)
         {
             lbButton.Text = "Quản lý hoạt động";
-            CloseAllForms();
+            CloseAllForms(); 
             SelectedButton((Button)sender);
-            openForm(new QLHDForm(TypeUser, null));
+            if (TypeUser == "UserSinhVien")
+            {
+                int idsv = SinhVien_BLL.Instance.Get_ByTaiKhoan_BLL(ID_TK).IDSinhVien;
+                openForm(new QLHDForm(TypeUser, idsv));
+            } 
+            else openForm(new QLHDForm(TypeUser, null));
         }
-
 
         private void btnQLTKhoan_Click(object sender, EventArgs e)
         {
@@ -144,17 +152,25 @@ namespace SE_15_UI
         private void btnQLSV_Click(object sender, EventArgs e)
         {
             lbButton.Text = "Quản lý sinh viên";
-            if (childForm != null) childForm.Close();
-
+            CloseAllForms();
             SelectedButton((Button)sender);
-            openForm(new QLSVForm());
+            if (TypeUser == "UserSinhVien")
+            {
+                SinhVienForm sv = new SinhVienForm(SinhVien_BLL.Instance.Get_ByTaiKhoan_BLL(ID_TK).IDSinhVien, TypeUser);               
+                openForm(sv);
+            }
+                
+            else if(TypeUser == "UserKhoa") openForm(new QLSVForm("UserKhoa",ID_TK));
+            else openForm(new QLSVForm("",ID_TK));
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             lbButton.Text = "Báo cáo thống kê";
+            CloseAllForms();
+
             SelectedButton((Button)sender);
-            openForm(new ThongKeForm());
+            openForm(new ThongKeForm(TypeUser));
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -174,22 +190,9 @@ namespace SE_15_UI
         private void btnMaximize_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
-            {
                 this.WindowState = FormWindowState.Normal;
-            }
             else
-            {
                 this.WindowState = FormWindowState.Maximized;
-            }
-        }
-
-
-
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            lbTime.Text = DateTime.Now.ToString("hh:mm:ss");
-
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)
@@ -204,8 +207,27 @@ namespace SE_15_UI
 
             this.Width = wid;
             this.Height = hei;
+
+            timer1.Start();
         }
 
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            CloseAllForms();
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbTime.Text = DateTime.Now.ToString("hh:mm:ss");
+        }
+
+        private void DashboardForm_Shown(object sender, EventArgs e)
+        {
+            if (typeUser == "UserAdmin")
+            {
+                int count = DuyetYC_BLL.Instance.GetListYC_BLL().Count;
+                MessageBox.Show("Có " + count + " yêu cầu cần phê duyệt!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

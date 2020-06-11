@@ -33,17 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\SE_15_BLL\bin\Debug\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\SE_15_BLL\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="SE_15_BLL">
-      <HintPath>..\SE_15_BLL\bin\Debug\SE_15_BLL.dll</HintPath>
-    </Reference>
-    <Reference Include="SE_15_DTO">
-      <HintPath>..\SE_15_BLL\bin\Debug\SE_15_DTO.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -59,17 +55,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfirmForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConfirmForm.Designer.cs">
-      <DependentUpon>ConfirmForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DashboardForm.Designer.cs">
       <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmForm.Designer.cs">
+      <DependentUpon>ConfirmForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DoiMKForm.cs">
       <SubType>Form</SubType>
@@ -151,8 +147,23 @@
     <Compile Include="ThongKeForm.Designer.cs">
       <DependentUpon>ThongKeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongKeForm_Chart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeForm_Chart.Designer.cs">
+      <DependentUpon>ThongKeForm_Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeForm_DSSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeForm_DSSV.Designer.cs">
+      <DependentUpon>ThongKeForm_DSSV.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmForm.resx">
+      <DependentUpon>ConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoiMKForm.resx">
       <DependentUpon>DoiMKForm.cs</DependentUpon>
@@ -203,6 +214,12 @@
     <EmbeddedResource Include="ThongKeForm.resx">
       <DependentUpon>ThongKeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeForm_Chart.resx">
+      <DependentUpon>ThongKeForm_Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeForm_DSSV.resx">
+      <DependentUpon>ThongKeForm_DSSV.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -231,6 +248,16 @@
     <Content Include="Resource\Increase64.png" />
     <Content Include="Resource\Read32.png" />
     <Content Include="Resource\Read64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SE_15_BLL\SE_15_BLL.csproj">
+      <Project>{c7c4ccab-b92a-49fe-b51b-2f3e2838cefc}</Project>
+      <Name>SE_15_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SE_15_DTO\SE_15_DTO.csproj">
+      <Project>{7c2f516f-8f93-4059-a956-18fb677ee27d}</Project>
+      <Name>SE_15_DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
