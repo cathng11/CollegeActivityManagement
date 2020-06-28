@@ -43,11 +43,6 @@ namespace TestInterface
                 b.TextAlign = ContentAlignment.BottomCenter;
                 b.TextImageRelation = TextImageRelation.ImageAboveText;
             }
-
-            int h = panel1.Height * 30 / 100;
-            label1.Location = new Point(panel1.Width * 10 / 100, h);
-            radioButton1.Location = new Point(label1.Location.X + label1.Width + 50, h);
-            radioButton2.Location = new Point(radioButton1.Location.X + radioButton1.Width + 50, h);
         }
 
         private void SetPicture()

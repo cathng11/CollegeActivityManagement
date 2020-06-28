@@ -40,7 +40,7 @@ namespace TestInterface
             }
             btnXem.Height = panelButton.Height * 26 / 100;
 
-            lbKhoa.Location = new Point(panel1.Width * 10 / 100, panel1.Height * 30 / 100);
+            lbKhoa.Location = new Point(panel1.Location.X + panel1.Width * 10 / 100, panel1.Location.Y + panel1.Height * 30 / 100);
             cbbKhoa.Location = new Point(lbKhoa.Location.X + lbKhoa.Width + 10, lbKhoa.Location.Y);
         }
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbSapxep = new System.Windows.Forms.Label();
+            this.lbKhoa = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.btnXem = new System.Windows.Forms.Button();
             this.picXem = new System.Windows.Forms.Panel();
@@ -45,22 +45,22 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lbSapxep);
+            this.panel1.Controls.Add(this.lbKhoa);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1016, 100);
             this.panel1.TabIndex = 1;
             // 
-            // lbSapxep
+            // lbKhoa
             // 
-            this.lbSapxep.AutoSize = true;
-            this.lbSapxep.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSapxep.Location = new System.Drawing.Point(79, 39);
-            this.lbSapxep.Name = "lbSapxep";
-            this.lbSapxep.Size = new System.Drawing.Size(84, 25);
-            this.lbSapxep.TabIndex = 1;
-            this.lbSapxep.Text = "Sắp xếp";
+            this.lbKhoa.AutoSize = true;
+            this.lbKhoa.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKhoa.Location = new System.Drawing.Point(79, 39);
+            this.lbKhoa.Name = "lbKhoa";
+            this.lbKhoa.Size = new System.Drawing.Size(84, 25);
+            this.lbKhoa.TabIndex = 1;
+            this.lbKhoa.Text = "Sắp xếp";
             // 
             // panelButton
             // 
@@ -139,7 +139,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbSapxep;
+        private System.Windows.Forms.Label lbKhoa;
         private System.Windows.Forms.Panel panelButton;
         private System.Windows.Forms.Button btnXem;
         private System.Windows.Forms.DataGridView dataGridView1;
