@@ -24,7 +24,8 @@ namespace TestInterface
         public void VisibleButtonSave()
         {
             btnSave.Visible = false;
-            btnThoat.Location = new Point(445, 545);
+            // btnThoat.Location = new Point(this.panelButton.Width * 27 / 100, this.panelButton.Height * 25 / 100);
+            //layoutButton.SetColumnSpan(btnThoat, 1);
         }
         private void SetView()
         {
@@ -53,7 +54,7 @@ namespace TestInterface
 
         private void HoatDong_SizeChanged(object sender, EventArgs e)
         {
-            SetView();
+            //SetView();
         }
     }
 }

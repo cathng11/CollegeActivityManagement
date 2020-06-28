@@ -24,7 +24,7 @@ namespace TestInterface
 
         private void TaiKhoan_SizeChanged(object sender, EventArgs e)
         {
-            SetView();
+            //SetView();
         }
 
         private void SetView()

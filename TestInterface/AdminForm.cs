@@ -28,15 +28,15 @@ namespace TestInterface
             this.Height = hei;
 
             panelLeft.Width = wid * 25 / 100;
-            panelIconBlue.Width = panelLeft.Width;
-            panelButton.Width = wid * 25 / 100;
-            foreach(Button b in this.panelButton.Controls.OfType<Button>())
+            //panelIconBlue.Width = panelLeft.Width;
+            panelButton.Width = panelLeft.Width;
+            foreach (Button b in this.panelButton.Controls.OfType<Button>())
             {
-                b.ImageAlign = ContentAlignment.MiddleLeft;
-                b.TextAlign = ContentAlignment.MiddleLeft;
-                b.TextImageRelation = TextImageRelation.ImageBeforeText;
-                b.Padding = new Padding(panelButton.Width*10/100, 0, 0, 0);
-                b.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Bold);
+                //b.ImageAlign = ContentAlignment.MiddleLeft;
+                //b.TextAlign = ContentAlignment.MiddleLeft;
+                //b.TextImageRelation = TextImageRelation.ImageBeforeText;
+                b.Padding = new Padding(panelButton.Width * 10 / 100, 0, 0, 0);
+                //  b.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Bold);
             }
             btnDangXuat.Padding = new Padding(panelButton.Width * 10 / 100, 0, 0, 0);
 
@@ -182,17 +182,18 @@ namespace TestInterface
                 int wid = this.Width;
                 int hei = this.Height;
                 panelLeft.Width = wid * 20 / 100;
-                panelIconBlue.Width = panelLeft.Width;
-                panelChildForm.Width = wid * 75 / 100;
-                panelChildForm.Height = hei * 75 / 100;
+                // panelIconBlue.Width = panelLeft.Width;
+                panelChildForm.Size = new Size(wid * 75 / 10, hei * 75 / 100);
+                //panelChildForm.Width = wid * 75 / 100;
+                //panelChildForm.Height = hei * 75 / 100;
                 panelButton.Width = wid * 20 / 100;
                 foreach (Button b in this.panelButton.Controls.OfType<Button>())
                 {
-                    b.ImageAlign = ContentAlignment.MiddleLeft;
-                    b.TextAlign = ContentAlignment.MiddleLeft;
-                    b.TextImageRelation = TextImageRelation.ImageBeforeText;
-                    b.Padding = new Padding(panelButton.Width * 15 / 100, 0, 0, 0);
-                    b.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Bold);
+                    //b.ImageAlign = ContentAlignment.MiddleLeft;
+                    //b.TextAlign = ContentAlignment.MiddleLeft;
+                    //b.TextImageRelation = TextImageRelation.ImageBeforeText;
+                    b.Padding = new Padding(panelButton.Width * 10 / 100, 0, 0, 0);
+                    //b.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Bold);
 
                 }
                 btnDangXuat.Padding = new Padding(panelButton.Width * 15 / 100, 0, 0, 0);
