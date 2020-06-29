@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
-    public partial class DuyetYeuCau : Form
+    public partial class DuyetYCForm : Form
     {
         public delegate void MyDel(Form form);
         private MyDel _D;
 
         public MyDel D { get => _D; set => _D = value; }
-        public DuyetYeuCau()
+        public DuyetYCForm()
         {
             InitializeComponent();
         }
@@ -35,9 +35,9 @@ namespace TestInterface
 
         private void btnXem_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            this.D(new HoatDong());
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            this.D(new HoatDongForm());
         }
     }
 }

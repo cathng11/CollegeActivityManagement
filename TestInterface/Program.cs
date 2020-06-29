@@ -23,7 +23,12 @@ namespace TestInterface
 
             if (loginform.SuccessLogin)
             {
-                Application.Run(new Admin());
+                if (loginform.TypeUser == "UserAdmin")
+                    Application.Run(new DashboardForm(loginform.TypeUser));
+                if (loginform.TypeUser == "UserSinhVien")
+                    Application.Run(new DashboardForm(loginform.TypeUser));
+                if (loginform.TypeUser == "UserKhoa")
+                    Application.Run(new DashboardForm(loginform.TypeUser));
             }
         }
            

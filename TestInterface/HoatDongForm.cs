@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
-    public partial class TaiKhoan : Form
+    public partial class HoatDongForm : Form
     {
         public delegate void MyDel(Form form);
         private MyDel _D;
 
         public MyDel D { get => _D; set => _D = value; }
 
-        public TaiKhoan()
+        public HoatDongForm()
         {
             InitializeComponent();
         }

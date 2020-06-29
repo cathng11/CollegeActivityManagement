@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
-    public partial class QLTK : Form
+    public partial class QLTKForm : Form
     {
         public delegate void MyDel(Form form);
         private MyDel _D;
 
         public MyDel D { get => _D; set => _D = value; }
-        public QLTK()
+        public QLTKForm()
         {
             InitializeComponent();
             SetView_Khoa_SV();
@@ -58,39 +58,46 @@ namespace TestInterface
 
         private void btnDoiMK_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            DoiMK mk = new DoiMK();
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            DoiMKForm mk = new DoiMKForm();
             this.D(mk);
         }
 
         private void btnXem_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            TaiKhoan tk = new TaiKhoan();
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            TaiKhoanForm tk = new TaiKhoanForm();
             tk.VisibleButtonSave();
             this.D(tk);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            ConfirmForm cf = new ConfirmForm();
+            cf.ShowDialog();
+            if (cf.ConfirmSuccess)
+            {
+                //delete
+                MessageBox.Show("Xoa/Huy thanh cong");
 
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            TaiKhoan tk = new TaiKhoan();
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            TaiKhoanForm tk = new TaiKhoanForm();
             this.D(tk);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            TaiKhoan tk = new TaiKhoan();
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            TaiKhoanForm tk = new TaiKhoanForm();
             this.D(tk);
         }
     }

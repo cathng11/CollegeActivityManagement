@@ -10,23 +10,29 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
-    public partial class Admin : Form
+    public partial class DashboardForm : Form
     {
-        public Admin()
+        public DashboardForm(string typeUser)
         {
             InitializeComponent();
             //SetView_Khoa();
-            SetView_SV();
+            //SetView_SV();
+            if (typeUser == "UserKhoa")
+                SetView_Khoa();
+            if (typeUser == "UserSinhVien")
+                SetView_SV();
         }
 
         private void SetView_Khoa()
         {
             btnDuyetYC.Visible = false;
             btnQLKhoa.Visible = false;
-            panelButton.SetRow(btnQLHD, 2);
-            panelButton.SetRow(btnQLDiemHD, 3);
-            panelButton.SetRow(btnQLTKhoan, 4);
-            panelButton.SetRow(btnThongKe, 5);
+            lbUser.Text = "(Khoa)";
+
+            //panelButton.SetRow(btnQLHD, 2);
+            //panelButton.SetRow(btnQLDiemHD, 3);
+            //panelButton.SetRow(btnQLTKhoan, 4);
+            //panelButton.SetRow(btnThongKe, 5);
         }
 
         private void SetView_SV()
@@ -35,9 +41,11 @@ namespace TestInterface
             btnQLKhoa.Visible = false;
             btnQLSV.Visible = false;
             btnThongKe.Visible = false;
-            panelButton.SetRow(btnQLHD, 1);
-            panelButton.SetRow(btnQLTKhoan, 2);
-            panelButton.SetRow(btnQLDiemHD, 3);
+            lbUser.Text = "(Sinh viên)";
+
+            //panelButton.SetRow(btnQLHD, 1);
+            //panelButton.SetRow(btnQLTKhoan, 2);
+            //panelButton.SetRow(btnQLDiemHD, 3);
         }
 
         private Form childForm = null;
@@ -57,56 +65,57 @@ namespace TestInterface
         {
             foreach (Button btn in this.panelButton.Controls.OfType<Button>())
             {
-                if (btn.BackColor == Color.FromArgb(203, 188, 6)) btn.BackColor = Color.FromArgb(222, 239, 90);
+                if (btn.BackColor == Color.FromArgb(151, 130, 171))
+                    btn.BackColor = Color.FromArgb(79, 58, 101);
             }
-            b.BackColor = Color.FromArgb(203, 188, 6);
+            b.BackColor = Color.FromArgb(151, 130, 171);
         }
 
         private void btnDuyetYC_Click(object sender, EventArgs e)
         {
+            lbButton.Text = "Duyệt yêu cầu phê duyệt hoạt động";
             SelectedButton((Button)sender);
-            openForm(new DuyetYeuCau());
+            openForm(new DuyetYCForm());
         }
 
         private void btnQLKhoa_Click(object sender, EventArgs e)
         {
+            lbButton.Text = "Quản lý khoa";
             if (childForm != null) childForm.Close();
             SelectedButton((Button)sender);
-            openForm(new QLKhoa());
+            openForm(new QLKhoaForm());
         }
 
         private void btnQLHD_Click(object sender, EventArgs e)
         {
             //tableLayoutPanel1.GetCellPosition(panelChildForm)
-            
+            lbButton.Text = "Quản lý hoạt động";
             SelectedButton((Button)sender);
-            openForm(new QLHD());
+            openForm(new QLHDForm());
         }
 
-        private void btnQLDiemHD_Click(object sender, EventArgs e)
-        {
-            SelectedButton((Button)sender);
-            openForm(new QLDiem());
-        }
 
         private void btnQLTKhoan_Click(object sender, EventArgs e)
         {
+            lbButton.Text = "Quản lý tài khoản";
             SelectedButton((Button)sender);
-            openForm(new QLTK());
+            openForm(new QLTKForm());
         }
 
         private void btnQLSV_Click(object sender, EventArgs e)
         {
+            lbButton.Text = "Quản lý sinh viên";
             if (childForm != null) childForm.Close();
 
             SelectedButton((Button)sender);
-            openForm(new QLSV());
+            openForm(new QLSVForm());
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+            lbButton.Text = "Báo cáo thống kê";
             SelectedButton((Button)sender);
-            openForm(new ThongKe());
+            openForm(new ThongKeForm());
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -135,12 +144,21 @@ namespace TestInterface
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbTime.Text = DateTime.Now.ToString("hh:mm:ss");
+
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void Admin_Load(object sender, EventArgs e)
+        private void DashboardForm_Load(object sender, EventArgs e)
         {
             int wid = Screen.PrimaryScreen.Bounds.Width * 80 / 100;
             int hei = Screen.PrimaryScreen.Bounds.Height * 80 / 100;
@@ -149,15 +167,6 @@ namespace TestInterface
             this.Height = hei;
         }
 
-        private void tableLayoutPanel1_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
-        {
-            SolidBrush solidBrush = new SolidBrush(Color.FromArgb(74, 74, 74));
-            if (e.Column == 0 && e.Row == 0)
-                e.Graphics.FillRectangle(solidBrush, e.CellBounds);
-            if (e.Column == 0 && e.Row == 2)
-                e.Graphics.FillRectangle(solidBrush, e.CellBounds);
-            if (e.Column == 1 && e.Row == 1)
-                e.Graphics.FillRectangle(solidBrush, e.CellBounds);
-        }
+
     }
 }

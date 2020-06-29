@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
-    public partial class QLSV : Form
+    public partial class QLSVForm : Form
     {
         public delegate void MyDel(Form form);
         private MyDel _D;
 
         public MyDel D { get => _D; set => _D = value; }
-        public QLSV()
+        public QLSVForm()
         {
             InitializeComponent();
             //SetView_Khoa();
@@ -55,31 +55,38 @@ namespace TestInterface
 
         private void btnXem_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            SinhVien sv = new SinhVien();
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            SinhVienForm sv = new SinhVienForm();
             sv.VisibleButtonSave();
             this.D(sv);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            ConfirmForm cf = new ConfirmForm();
+            cf.ShowDialog();
+            if (cf.ConfirmSuccess)
+            {
+                //delete
+                MessageBox.Show("Xoa/Huy thanh cong");
 
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            SinhVien sv = new SinhVien();
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            SinhVienForm sv = new SinhVienForm();
             this.D(sv);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            Admin admin = (Admin)Application.OpenForms["Admin"];
-            this.D = new MyDel(admin.openForm);
-            SinhVien sv = new SinhVien();
+            DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
+            this.D = new MyDel(df.openForm);
+            SinhVienForm sv = new SinhVienForm();
             this.D(sv);
         }
     }

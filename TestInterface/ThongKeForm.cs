@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
-    public partial class ThongKe : Form
+    public partial class ThongKeForm : Form
     {
-        public ThongKe()
+        public ThongKeForm()
         {
             InitializeComponent();
         }
