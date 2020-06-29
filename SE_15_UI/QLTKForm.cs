@@ -18,14 +18,14 @@ namespace SE_15_UI
         private MyDel _D;
         public MyDel D { get => _D; set => _D = value; }
 
-        private string _TypeUser;
-        public string TypeUser { get => _TypeUser; set => _TypeUser = value; }
+        private string typeUser;
+        public string TypeUser { get => typeUser; set => typeUser = value; }
 
         public QLTKForm(string typeUser)
         {
             TypeUser = typeUser;
             InitializeComponent();
-            if (TypeUser == "UserKhoa" || TypeUser == "UserSinhVien")
+            if (typeUser == "UserKhoa" || typeUser == "UserSinhVien")
                 SetView_Khoa_SV();
             SetCBBLoaiTK();
             ShowTaiKhoan();
@@ -87,11 +87,12 @@ namespace SE_15_UI
         {
             if (TypeUser == "UserAdmin")
             {
-                cbbLoaiTK.Items.Add(new LoaiTaiKhoan_DTO { IDLoaiTaiKhoan = "", TenLoai = "All" });
+                cbbLoaiTK.Items.Add(new LoaiTaiKhoan_DTO {IDLoaiTaiKhoan="",TenLoai= "All" });
                 foreach (LoaiTaiKhoan_DTO item in LoaiTaiKhoan_BLL.Instance.GetAll_BLL())
                 {
                     cbbLoaiTK.Items.Add(item);
                 }
+                //cbbLoaiTK.DisplayMember = "TenLoai";
             }
             else if (TypeUser == "UserKhoa")
             {
@@ -99,6 +100,7 @@ namespace SE_15_UI
                 {
                     if (item.TenLoai != "Admin") cbbLoaiTK.Items.Add(item);
                 }
+                //cbbLoaiTK.DisplayMember = "TenLoai";
             }
             else
             {
@@ -110,10 +112,10 @@ namespace SE_15_UI
 
         private void btnDoiMK_Click(object sender, EventArgs e)
         {
-            //DataGridViewSelectedRowCollection r = dtgvTaiKhoan.SelectedRows;
+            DataGridViewSelectedRowCollection r = dtgvTaiKhoan.SelectedRows;
             DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
             this.D = new MyDel(df.openForm);
-            DoiMKForm mk = new DoiMKForm();
+            DoiMKForm mk = new DoiMKForm(r[0].Cells[0].Value.ToString());
             this.D(mk);
         }
 

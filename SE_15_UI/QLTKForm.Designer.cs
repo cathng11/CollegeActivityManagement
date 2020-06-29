@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.layoutButton = new System.Windows.Forms.TableLayoutPanel();
@@ -38,6 +43,9 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvTaiKhoan = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.lbLoaiTK = new System.Windows.Forms.Label();
             this.cbbLoaiTK = new System.Windows.Forms.ComboBox();
@@ -200,13 +208,83 @@
             // 
             // dtgvTaiKhoan
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LightSlateGray;
+            this.dtgvTaiKhoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvTaiKhoan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
-            this.dtgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvTaiKhoan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(79)))), ((int)(((byte)(125)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(79)))), ((int)(((byte)(125)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvTaiKhoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvTaiKhoan.ColumnHeadersHeight = 30;
+            this.dtgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dtgvTaiKhoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightSlateGray;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvTaiKhoan.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvTaiKhoan.EnableHeadersVisualStyles = false;
+            this.dtgvTaiKhoan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
             this.dtgvTaiKhoan.Location = new System.Drawing.Point(0, 0);
+            this.dtgvTaiKhoan.MultiSelect = false;
             this.dtgvTaiKhoan.Name = "dtgvTaiKhoan";
+            this.dtgvTaiKhoan.ReadOnly = true;
+            this.dtgvTaiKhoan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvTaiKhoan.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgvTaiKhoan.RowHeadersWidth = 45;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
+            this.dtgvTaiKhoan.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dtgvTaiKhoan.RowTemplate.Height = 30;
+            this.dtgvTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvTaiKhoan.Size = new System.Drawing.Size(796, 523);
             this.dtgvTaiKhoan.TabIndex = 2;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "IDTaiKhoan";
+            this.Column1.HeaderText = "ID tài khoản";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenDangNhap";
+            this.Column2.HeaderText = "Tên đăng nhập";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "LoaiTaiKhoan";
+            this.Column3.HeaderText = "Loại tài khoản";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // tableLayoutPanel4
             // 
@@ -245,6 +323,7 @@
             this.cbbLoaiTK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbbLoaiTK.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLoaiTK.FormattingEnabled = true;
+            this.cbbLoaiTK.ItemHeight = 13;
             this.cbbLoaiTK.Location = new System.Drawing.Point(203, 40);
             this.cbbLoaiTK.Margin = new System.Windows.Forms.Padding(0);
             this.cbbLoaiTK.Name = "cbbLoaiTK";
@@ -289,5 +368,8 @@
         private System.Windows.Forms.ComboBox cbbLoaiTK;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dtgvTaiKhoan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

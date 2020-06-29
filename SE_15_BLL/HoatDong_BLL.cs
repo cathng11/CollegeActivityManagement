@@ -34,7 +34,7 @@ namespace SE_15_BLL
             try
             {
                 SE_15Entities sE_15Entities = new SE_15Entities();
-                return sE_15Entities.HoatDongs.Select(hd => new HoatDong_DTO()
+                var list_HD = sE_15Entities.HoatDongs.Select(hd => new HoatDong_DTO()
                 {
                     IDHoatDong = hd.IDHoatDong,
                     LoaiHoatDong = hd.LoaiHoatDong.LoaiHoatDong1,
@@ -48,6 +48,7 @@ namespace SE_15_BLL
                     TrangThaiPheDuyet = hd.TrangThaiPheDuyet,
                     TrangThaiDangKy = hd.TrangThaiDangKy
                 }).ToList();
+                return list_HD;
             }
             catch (Exception)
             {

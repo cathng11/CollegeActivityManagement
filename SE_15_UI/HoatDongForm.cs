@@ -22,8 +22,8 @@ namespace SE_15_UI
         private string _ID_HD;
         public string ID_HD { get => _ID_HD; set => _ID_HD = value; }
 
-        private string _TypeUser;
-        public string TypeUser { get => _TypeUser; set => _TypeUser = value; }
+        private string typeUser;
+        public string TypeUser { get => typeUser; set => typeUser = value; }
 
         public HoatDongForm(string id_HD, string typeUser)
         {
@@ -32,16 +32,10 @@ namespace SE_15_UI
             InitializeComponent();
             LoadCBB();
             ShowData_HD();
-            if (TypeUser == "UserKhoa")
+            if(TypeUser=="UserKhoa")
             {
                 cbbPheDuyet.Enabled = false;
                 cbbDangKy.Enabled = false;
-                DashboardForm dashboardForm = (DashboardForm)Application.OpenForms["DashboardForm"];
-                Khoa khoa = Khoa_BLL.Instance.Get_ByTaiKhoan_BLL(dashboardForm.ID_TK);
-                ((Khoa_DTO)cbbTenKhoa.SelectedItem).TenKhoa = khoa.TenKhoa;
-                cbbTenKhoa.Enabled = false;
-                if (HoatDong_BLL.Instance.Get_ByID_BLL(ID_HD).TrangThaiPheDuyet == "Đã duyệt")
-                    cbbDangKy.Enabled = true;
             }
             else
             {
@@ -59,6 +53,7 @@ namespace SE_15_UI
 
         private void LoadCBB()
         {
+            //cbbPheDuyet.Items.Add("Chưa duyệt");
             cbbPheDuyet.Items.Add("Đã duyệt");
             cbbPheDuyet.Items.Add("Không duyệt");
             cbbDangKy.Items.Add("Mở đăng ký");
@@ -73,6 +68,7 @@ namespace SE_15_UI
                     if (hd.IDLoaiHoatDong == item.IDLoaiHoatDong)
                         cbbLoaiHD.Text = item.LoaiHoatDong;
                 }
+                //cbbLoaiHD.DisplayMember = "LoaiHoatDong";
 
                 Khoa k = Khoa_BLL.Instance.Get_ByID_BLL(hd.IDKhoa.Value);
                 foreach (Khoa_DTO item in Khoa_BLL.Instance.GetAll_BLL())
@@ -81,6 +77,8 @@ namespace SE_15_UI
                     if (k != null && k.IDKhoa == item.IDKhoa)
                         cbbTenKhoa.Text = item.TenKhoa;
                 }
+                //cbbTenKhoa.DisplayMember = "TenKhoa";
+
 
                 cbbLoaiHD.Text = hd.LoaiHoatDong.LoaiHoatDong1;
                 cbbTenKhoa.Text = hd.Khoa.TenKhoa;
@@ -94,10 +92,12 @@ namespace SE_15_UI
                 {
                     cbbLoaiHD.Items.Add(item);
                 }
+                //cbbLoaiHD.DisplayMember = "LoaiHoatDong";
                 foreach (Khoa_DTO item in Khoa_BLL.Instance.GetAll_BLL())
                 {
                     cbbTenKhoa.Items.Add(item);
                 }
+                //cbbTenKhoa.DisplayMember = "TenKhoa";
             }
         }
 
@@ -162,10 +162,11 @@ namespace SE_15_UI
                         ChiPhi = Convert.ToInt32(txtChiPhi.Value),
                         MoTa = txtMoTa.Text,
                         YeuCau = txtYeuCauSV.Text,
-                        DiemHD = Convert.ToInt32(txtDiemHD.Value)
+                        DiemHD = Convert.ToInt32(txtDiemHD.Value),
+
                     };
 
-                    if (cbbDangKy.Text != "" && cbbPheDuyet.Text != "")
+                    if(cbbDangKy.Text != "" && cbbPheDuyet.Text != "")
                     {
                         hoatDong.TrangThaiPheDuyet = cbbPheDuyet.SelectedItem.ToString();
                         hoatDong.TrangThaiDangKy = cbbDangKy.SelectedItem.ToString();
@@ -210,10 +211,22 @@ namespace SE_15_UI
                     };
                     HoatDong_BLL.Instance.Edit_BLL(newHD);
 
+                    //DashboardForm dashboardForm = (DashboardForm)Application.OpenForms["DashboardForm"];
+
+                    //if (Form.ActiveForm != QLHDForm.ActiveForm)
+                    //{
+                    //    DuyetYCForm duyet = (DuyetYCForm)Application.OpenForms["DuyetYCForm"];
+                    //    D += duyet.ShowYeuCau;
+                    //}
+                    //else
+                    //{
+                        
+                    //}
+
                     try
                     {
                         DuyetYCForm duyet = (DuyetYCForm)Application.OpenForms["DuyetYCForm"];
-                        //D += duyet.ShowYeuCau;
+                        D += duyet.ShowYeuCau;
                     }
                     catch (Exception)
                     {

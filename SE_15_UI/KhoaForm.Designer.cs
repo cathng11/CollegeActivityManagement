@@ -34,20 +34,23 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.table1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtTenTK = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtIDTaiKhoan = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtSoLuongSV = new System.Windows.Forms.TextBox();
+            this.grBoxTK = new System.Windows.Forms.GroupBox();
+            this.rdBtnAvailable = new System.Windows.Forms.RadioButton();
+            this.rdBtnAuto = new System.Windows.Forms.RadioButton();
+            this.txtTenTK = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTenKhoa = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtIDKhoa = new System.Windows.Forms.TextBox();
+            this.txtSoLuongSV = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             this.layoutButton.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.table1.SuspendLayout();
+            this.grBoxTK.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongSV)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -113,6 +116,7 @@
             this.btnSave.TabIndex = 29;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -137,23 +141,20 @@
             this.table1.ColumnCount = 2;
             this.table1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.70392F));
             this.table1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.29608F));
-            this.table1.Controls.Add(this.txtTenTK, 1, 4);
-            this.table1.Controls.Add(this.label14, 0, 4);
-            this.table1.Controls.Add(this.txtIDTaiKhoan, 1, 3);
-            this.table1.Controls.Add(this.label13, 0, 3);
-            this.table1.Controls.Add(this.txtSoLuongSV, 1, 2);
+            this.table1.Controls.Add(this.label14, 0, 3);
+            this.table1.Controls.Add(this.grBoxTK, 1, 3);
             this.table1.Controls.Add(this.label12, 0, 2);
             this.table1.Controls.Add(this.txtTenKhoa, 1, 1);
             this.table1.Controls.Add(this.label11, 0, 1);
             this.table1.Controls.Add(this.label10, 0, 0);
             this.table1.Controls.Add(this.txtIDKhoa, 1, 0);
+            this.table1.Controls.Add(this.txtSoLuongSV, 1, 2);
             this.table1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table1.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.table1.Location = new System.Drawing.Point(149, 100);
             this.table1.Margin = new System.Windows.Forms.Padding(0);
             this.table1.Name = "table1";
-            this.table1.RowCount = 5;
-            this.table1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.table1.RowCount = 4;
             this.table1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.table1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.table1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -162,65 +163,67 @@
             this.table1.Size = new System.Drawing.Size(695, 401);
             this.table1.TabIndex = 28;
             // 
-            // txtTenTK
-            // 
-            this.txtTenTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
-            this.txtTenTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTenTK.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtTenTK.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenTK.Location = new System.Drawing.Point(248, 320);
-            this.txtTenTK.Margin = new System.Windows.Forms.Padding(0);
-            this.txtTenTK.Name = "txtTenTK";
-            this.txtTenTK.Size = new System.Drawing.Size(447, 22);
-            this.txtTenTK.TabIndex = 20;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Top;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(3, 320);
+            this.label14.Location = new System.Drawing.Point(3, 300);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(242, 21);
             this.label14.TabIndex = 20;
             this.label14.Text = "Tên tài khoản";
             // 
-            // txtIDTaiKhoan
+            // grBoxTK
             // 
-            this.txtIDTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
-            this.txtIDTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIDTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtIDTaiKhoan.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDTaiKhoan.Location = new System.Drawing.Point(248, 240);
-            this.txtIDTaiKhoan.Margin = new System.Windows.Forms.Padding(0);
-            this.txtIDTaiKhoan.Name = "txtIDTaiKhoan";
-            this.txtIDTaiKhoan.Size = new System.Drawing.Size(447, 22);
-            this.txtIDTaiKhoan.TabIndex = 20;
+            this.grBoxTK.Controls.Add(this.rdBtnAvailable);
+            this.grBoxTK.Controls.Add(this.rdBtnAuto);
+            this.grBoxTK.Controls.Add(this.txtTenTK);
+            this.grBoxTK.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grBoxTK.Location = new System.Drawing.Point(248, 300);
+            this.grBoxTK.Margin = new System.Windows.Forms.Padding(0);
+            this.grBoxTK.Name = "grBoxTK";
+            this.grBoxTK.Padding = new System.Windows.Forms.Padding(0);
+            this.grBoxTK.Size = new System.Drawing.Size(447, 101);
+            this.grBoxTK.TabIndex = 31;
+            this.grBoxTK.TabStop = false;
             // 
-            // label13
+            // rdBtnAvailable
             // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(3, 240);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(242, 21);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "Mã số tài khoản";
+            this.rdBtnAvailable.AutoSize = true;
+            this.rdBtnAvailable.Location = new System.Drawing.Point(214, 47);
+            this.rdBtnAvailable.Name = "rdBtnAvailable";
+            this.rdBtnAvailable.Size = new System.Drawing.Size(75, 25);
+            this.rdBtnAvailable.TabIndex = 7;
+            this.rdBtnAvailable.TabStop = true;
+            this.rdBtnAvailable.Text = "Có sẵn";
+            this.rdBtnAvailable.UseVisualStyleBackColor = true;
+            this.rdBtnAvailable.CheckedChanged += new System.EventHandler(this.rdBtnAvailable_CheckedChanged);
             // 
-            // txtSoLuongSV
+            // rdBtnAuto
             // 
-            this.txtSoLuongSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
-            this.txtSoLuongSV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSoLuongSV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtSoLuongSV.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuongSV.Location = new System.Drawing.Point(248, 160);
-            this.txtSoLuongSV.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSoLuongSV.Name = "txtSoLuongSV";
-            this.txtSoLuongSV.Size = new System.Drawing.Size(447, 22);
-            this.txtSoLuongSV.TabIndex = 20;
+            this.rdBtnAuto.AutoSize = true;
+            this.rdBtnAuto.Location = new System.Drawing.Point(61, 47);
+            this.rdBtnAuto.Name = "rdBtnAuto";
+            this.rdBtnAuto.Size = new System.Drawing.Size(141, 25);
+            this.rdBtnAuto.TabIndex = 6;
+            this.rdBtnAuto.TabStop = true;
+            this.rdBtnAuto.Text = "Tự động tạo mới";
+            this.rdBtnAuto.UseVisualStyleBackColor = true;
+            this.rdBtnAuto.CheckedChanged += new System.EventHandler(this.rdBtnAuto_CheckedChanged);
+            // 
+            // txtTenTK
+            // 
+            this.txtTenTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
+            this.txtTenTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTenTK.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtTenTK.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenTK.Location = new System.Drawing.Point(0, 22);
+            this.txtTenTK.Margin = new System.Windows.Forms.Padding(0);
+            this.txtTenTK.Name = "txtTenTK";
+            this.txtTenTK.Size = new System.Drawing.Size(447, 22);
+            this.txtTenTK.TabIndex = 5;
             // 
             // label12
             // 
@@ -228,7 +231,7 @@
             this.label12.Dock = System.Windows.Forms.DockStyle.Top;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(3, 160);
+            this.label12.Location = new System.Drawing.Point(3, 200);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(242, 21);
             this.label12.TabIndex = 20;
@@ -240,11 +243,11 @@
             this.txtTenKhoa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenKhoa.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtTenKhoa.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenKhoa.Location = new System.Drawing.Point(248, 80);
+            this.txtTenKhoa.Location = new System.Drawing.Point(248, 100);
             this.txtTenKhoa.Margin = new System.Windows.Forms.Padding(0);
             this.txtTenKhoa.Name = "txtTenKhoa";
             this.txtTenKhoa.Size = new System.Drawing.Size(447, 22);
-            this.txtTenKhoa.TabIndex = 20;
+            this.txtTenKhoa.TabIndex = 1;
             // 
             // label11
             // 
@@ -252,7 +255,7 @@
             this.label11.Dock = System.Windows.Forms.DockStyle.Top;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(3, 80);
+            this.label11.Location = new System.Drawing.Point(3, 100);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(242, 21);
             this.label11.TabIndex = 20;
@@ -280,7 +283,22 @@
             this.txtIDKhoa.Margin = new System.Windows.Forms.Padding(0);
             this.txtIDKhoa.Name = "txtIDKhoa";
             this.txtIDKhoa.Size = new System.Drawing.Size(447, 22);
-            this.txtIDKhoa.TabIndex = 20;
+            this.txtIDKhoa.TabIndex = 0;
+            // 
+            // txtSoLuongSV
+            // 
+            this.txtSoLuongSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
+            this.txtSoLuongSV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtSoLuongSV.Location = new System.Drawing.Point(248, 200);
+            this.txtSoLuongSV.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSoLuongSV.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtSoLuongSV.Name = "txtSoLuongSV";
+            this.txtSoLuongSV.Size = new System.Drawing.Size(447, 29);
+            this.txtSoLuongSV.TabIndex = 32;
             // 
             // KhoaForm
             // 
@@ -297,6 +315,9 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.table1.ResumeLayout(false);
             this.table1.PerformLayout();
+            this.grBoxTK.ResumeLayout(false);
+            this.grBoxTK.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongSV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,11 +326,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel table1;
-        private System.Windows.Forms.TextBox txtTenTK;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtIDTaiKhoan;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtSoLuongSV;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtTenKhoa;
         private System.Windows.Forms.Label label11;
@@ -319,5 +336,10 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.GroupBox grBoxTK;
+        private System.Windows.Forms.TextBox txtTenTK;
+        private System.Windows.Forms.RadioButton rdBtnAvailable;
+        private System.Windows.Forms.RadioButton rdBtnAuto;
+        private System.Windows.Forms.NumericUpDown txtSoLuongSV;
     }
 }

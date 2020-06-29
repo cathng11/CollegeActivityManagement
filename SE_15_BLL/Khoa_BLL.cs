@@ -75,5 +75,71 @@ namespace SE_15_BLL
                 return null;
             }
         }
+
+        public int GetIDKhoa_BLL(string tenkhoa)
+        {
+            SE_15Entities db = new SE_15Entities();
+            return (db.Khoas.Where(k => k.TenKhoa == tenkhoa).FirstOrDefault()).IDKhoa;
+        }
+        public List<Khoa> CBBGetListKhoa_BLL()
+        {
+            SE_15Entities db = new SE_15Entities();
+            return db.Khoas.ToList();
+        }
+        public Khoa ShowKhoa_BLL(Nullable<int> id)
+        {
+            SE_15Entities db = new SE_15Entities();
+            return db.Khoas.Where(k => k.IDKhoa == id).FirstOrDefault();
+        }
+        public bool AddKhoa_BLL(Khoa khoa)
+        {
+            try
+            {
+                SE_15Entities db = new SE_15Entities();
+                db.Khoas.Add(khoa);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public bool UpdateKhoa_BLL(Khoa khoa)
+        {
+            try
+            {
+                SE_15Entities db = new SE_15Entities();
+                db.Khoas.Attach(khoa);
+                db.Entry(khoa).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public Khoa FindUsername_BLL(string nametk)
+        {
+            try
+            {
+                SE_15Entities db = new SE_15Entities();
+                var list = db.Khoas.Where(k => k.TaiKhoan.TenDangNhap == nametk).FirstOrDefault();
+                return list;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+        }
+        public List<Khoa_DTO> Sort_BLL(string sort)
+        {
+            if (sort == "id") return GetAll_BLL().OrderByDescending(p => p.IDKhoa).ToList();
+            else return GetAll_BLL().OrderBy(p => p.TenKhoa).ToList();
+        }
+
     }
+
 }

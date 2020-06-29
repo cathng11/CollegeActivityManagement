@@ -35,17 +35,16 @@
             this.btnQLTKhoan = new System.Windows.Forms.Button();
             this.btnQLHD = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.btnQLDiemHD = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbUser = new System.Windows.Forms.Label();
             this.lbNameUser = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnQLSV = new System.Windows.Forms.Button();
-            this.btnThongKe = new System.Windows.Forms.Button();
             this.btnDuyetYC = new System.Windows.Forms.Button();
             this.btnQLKhoa = new System.Windows.Forms.Button();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnQLSV = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.lbTime = new System.Windows.Forms.Label();
@@ -87,12 +86,11 @@
             this.panelButton.Controls.Add(this.btnQLTKhoan, 0, 1);
             this.panelButton.Controls.Add(this.btnQLHD, 0, 2);
             this.panelButton.Controls.Add(this.btnDangXuat, 0, 9);
-            this.panelButton.Controls.Add(this.btnQLDiemHD, 0, 3);
             this.panelButton.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.panelButton.Controls.Add(this.btnQLSV, 0, 5);
+            this.panelButton.Controls.Add(this.btnDuyetYC, 0, 6);
+            this.panelButton.Controls.Add(this.btnQLKhoa, 0, 5);
             this.panelButton.Controls.Add(this.btnThongKe, 0, 4);
-            this.panelButton.Controls.Add(this.btnDuyetYC, 0, 7);
-            this.panelButton.Controls.Add(this.btnQLKhoa, 0, 6);
+            this.panelButton.Controls.Add(this.btnQLSV, 0, 3);
             this.panelButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelButton.Location = new System.Drawing.Point(0, 0);
             this.panelButton.Margin = new System.Windows.Forms.Padding(0);
@@ -175,26 +173,6 @@
             this.btnDangXuat.UseVisualStyleBackColor = false;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
-            // btnQLDiemHD
-            // 
-            this.btnQLDiemHD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnQLDiemHD.FlatAppearance.BorderSize = 0;
-            this.btnQLDiemHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLDiemHD.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLDiemHD.ForeColor = System.Drawing.Color.Black;
-            this.btnQLDiemHD.Image = ((System.Drawing.Image)(resources.GetObject("btnQLDiemHD.Image")));
-            this.btnQLDiemHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLDiemHD.Location = new System.Drawing.Point(0, 240);
-            this.btnQLDiemHD.Margin = new System.Windows.Forms.Padding(0);
-            this.btnQLDiemHD.Name = "btnQLDiemHD";
-            this.btnQLDiemHD.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnQLDiemHD.Size = new System.Drawing.Size(250, 45);
-            this.btnQLDiemHD.TabIndex = 6;
-            this.btnQLDiemHD.Text = "Điểm hoạt động";
-            this.btnQLDiemHD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLDiemHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQLDiemHD.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
@@ -222,6 +200,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(64)))), ((int)(((byte)(89)))));
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(25, 22);
@@ -277,26 +256,47 @@
             this.panel3.Size = new System.Drawing.Size(200, 22);
             this.panel3.TabIndex = 4;
             // 
-            // btnQLSV
+            // btnDuyetYC
             // 
-            this.btnQLSV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnQLSV.FlatAppearance.BorderSize = 0;
-            this.btnQLSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLSV.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLSV.ForeColor = System.Drawing.Color.Black;
-            this.btnQLSV.Image = ((System.Drawing.Image)(resources.GetObject("btnQLSV.Image")));
-            this.btnQLSV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLSV.Location = new System.Drawing.Point(0, 330);
-            this.btnQLSV.Margin = new System.Windows.Forms.Padding(0);
-            this.btnQLSV.Name = "btnQLSV";
-            this.btnQLSV.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnQLSV.Size = new System.Drawing.Size(250, 45);
-            this.btnQLSV.TabIndex = 3;
-            this.btnQLSV.Text = "Sinh viên";
-            this.btnQLSV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLSV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQLSV.UseVisualStyleBackColor = true;
-            this.btnQLSV.Click += new System.EventHandler(this.btnQLSV_Click);
+            this.btnDuyetYC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDuyetYC.FlatAppearance.BorderSize = 0;
+            this.btnDuyetYC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyetYC.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDuyetYC.ForeColor = System.Drawing.Color.Black;
+            this.btnDuyetYC.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyetYC.Image")));
+            this.btnDuyetYC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDuyetYC.Location = new System.Drawing.Point(0, 375);
+            this.btnDuyetYC.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDuyetYC.Name = "btnDuyetYC";
+            this.btnDuyetYC.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnDuyetYC.Size = new System.Drawing.Size(250, 45);
+            this.btnDuyetYC.TabIndex = 9;
+            this.btnDuyetYC.Text = "Duyệt yêu cầu";
+            this.btnDuyetYC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDuyetYC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDuyetYC.UseVisualStyleBackColor = true;
+            this.btnDuyetYC.Click += new System.EventHandler(this.btnDuyetYC_Click);
+            // 
+            // btnQLKhoa
+            // 
+            this.btnQLKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnQLKhoa.FlatAppearance.BorderSize = 0;
+            this.btnQLKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLKhoa.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLKhoa.ForeColor = System.Drawing.Color.Black;
+            this.btnQLKhoa.Image = ((System.Drawing.Image)(resources.GetObject("btnQLKhoa.Image")));
+            this.btnQLKhoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLKhoa.Location = new System.Drawing.Point(0, 330);
+            this.btnQLKhoa.Margin = new System.Windows.Forms.Padding(0);
+            this.btnQLKhoa.Name = "btnQLKhoa";
+            this.btnQLKhoa.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnQLKhoa.Size = new System.Drawing.Size(250, 45);
+            this.btnQLKhoa.TabIndex = 4;
+            this.btnQLKhoa.Text = "Khoa";
+            this.btnQLKhoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLKhoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLKhoa.UseVisualStyleBackColor = true;
+            this.btnQLKhoa.Click += new System.EventHandler(this.btnQLKhoa_Click);
             // 
             // btnThongKe
             // 
@@ -319,47 +319,26 @@
             this.btnThongKe.UseVisualStyleBackColor = true;
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
-            // btnDuyetYC
+            // btnQLSV
             // 
-            this.btnDuyetYC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDuyetYC.FlatAppearance.BorderSize = 0;
-            this.btnDuyetYC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuyetYC.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDuyetYC.ForeColor = System.Drawing.Color.Black;
-            this.btnDuyetYC.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyetYC.Image")));
-            this.btnDuyetYC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDuyetYC.Location = new System.Drawing.Point(0, 420);
-            this.btnDuyetYC.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDuyetYC.Name = "btnDuyetYC";
-            this.btnDuyetYC.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnDuyetYC.Size = new System.Drawing.Size(250, 45);
-            this.btnDuyetYC.TabIndex = 9;
-            this.btnDuyetYC.Text = "Duyệt yêu cầu";
-            this.btnDuyetYC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDuyetYC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDuyetYC.UseVisualStyleBackColor = true;
-            this.btnDuyetYC.Click += new System.EventHandler(this.btnDuyetYC_Click);
-            // 
-            // btnQLKhoa
-            // 
-            this.btnQLKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnQLKhoa.FlatAppearance.BorderSize = 0;
-            this.btnQLKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLKhoa.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLKhoa.ForeColor = System.Drawing.Color.Black;
-            this.btnQLKhoa.Image = ((System.Drawing.Image)(resources.GetObject("btnQLKhoa.Image")));
-            this.btnQLKhoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLKhoa.Location = new System.Drawing.Point(0, 375);
-            this.btnQLKhoa.Margin = new System.Windows.Forms.Padding(0);
-            this.btnQLKhoa.Name = "btnQLKhoa";
-            this.btnQLKhoa.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnQLKhoa.Size = new System.Drawing.Size(250, 45);
-            this.btnQLKhoa.TabIndex = 4;
-            this.btnQLKhoa.Text = "Khoa";
-            this.btnQLKhoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLKhoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQLKhoa.UseVisualStyleBackColor = true;
-            this.btnQLKhoa.Click += new System.EventHandler(this.btnQLKhoa_Click);
+            this.btnQLSV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnQLSV.FlatAppearance.BorderSize = 0;
+            this.btnQLSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLSV.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLSV.ForeColor = System.Drawing.Color.Black;
+            this.btnQLSV.Image = ((System.Drawing.Image)(resources.GetObject("btnQLSV.Image")));
+            this.btnQLSV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSV.Location = new System.Drawing.Point(0, 240);
+            this.btnQLSV.Margin = new System.Windows.Forms.Padding(0);
+            this.btnQLSV.Name = "btnQLSV";
+            this.btnQLSV.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnQLSV.Size = new System.Drawing.Size(250, 45);
+            this.btnQLSV.TabIndex = 3;
+            this.btnQLSV.Text = "Sinh viên";
+            this.btnQLSV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLSV.UseVisualStyleBackColor = true;
+            this.btnQLSV.Click += new System.EventHandler(this.btnQLSV_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -405,7 +384,8 @@
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(79)))), ((int)(((byte)(125)))));
-            this.tableLayoutPanel5.ColumnCount = 7;
+            this.tableLayoutPanel5.ColumnCount = 8;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.166667F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.083333F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.16666F));
@@ -413,11 +393,11 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.166667F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.166667F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.083333F));
-            this.tableLayoutPanel5.Controls.Add(this.btnClose, 5, 1);
-            this.tableLayoutPanel5.Controls.Add(this.btnMaximize, 4, 1);
-            this.tableLayoutPanel5.Controls.Add(this.btnMinimize, 3, 1);
-            this.tableLayoutPanel5.Controls.Add(this.lbButton, 2, 1);
-            this.tableLayoutPanel5.Controls.Add(this.btnHome, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.btnClose, 6, 1);
+            this.tableLayoutPanel5.Controls.Add(this.btnMaximize, 5, 1);
+            this.tableLayoutPanel5.Controls.Add(this.btnMinimize, 4, 1);
+            this.tableLayoutPanel5.Controls.Add(this.lbButton, 3, 1);
+            this.tableLayoutPanel5.Controls.Add(this.btnHome, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
@@ -436,9 +416,9 @@
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(704, 12);
+            this.btnClose.Location = new System.Drawing.Point(705, 12);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 22);
+            this.btnClose.Size = new System.Drawing.Size(24, 22);
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
@@ -450,9 +430,9 @@
             this.btnMaximize.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.Location = new System.Drawing.Point(673, 12);
+            this.btnMaximize.Location = new System.Drawing.Point(675, 12);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(25, 22);
+            this.btnMaximize.Size = new System.Drawing.Size(24, 22);
             this.btnMaximize.TabIndex = 3;
             this.btnMaximize.UseVisualStyleBackColor = true;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
@@ -464,9 +444,9 @@
             this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Location = new System.Drawing.Point(642, 12);
+            this.btnMinimize.Location = new System.Drawing.Point(645, 12);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(25, 22);
+            this.btnMinimize.Size = new System.Drawing.Size(24, 22);
             this.btnMinimize.TabIndex = 2;
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -477,25 +457,27 @@
             this.lbButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbButton.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbButton.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.lbButton.Location = new System.Drawing.Point(46, 9);
+            this.lbButton.Location = new System.Drawing.Point(65, 9);
             this.lbButton.Margin = new System.Windows.Forms.Padding(0);
             this.lbButton.Name = "lbButton";
-            this.lbButton.Size = new System.Drawing.Size(593, 28);
+            this.lbButton.Size = new System.Drawing.Size(577, 28);
             this.lbButton.TabIndex = 12;
             this.lbButton.Text = "Welcome back !";
             this.lbButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnHome
             // 
+            this.btnHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHome.BackgroundImage")));
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Location = new System.Drawing.Point(3, 12);
+            this.btnHome.Location = new System.Drawing.Point(23, 12);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(25, 22);
+            this.btnHome.Size = new System.Drawing.Size(24, 22);
             this.btnHome.TabIndex = 13;
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // timer1
             // 
@@ -513,6 +495,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardForm";
             this.Load += new System.EventHandler(this.DashboardForm_Load);
+            this.Shown += new System.EventHandler(this.DashboardForm_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -535,7 +518,6 @@
         private System.Windows.Forms.Button btnQLKhoa;
         private System.Windows.Forms.Button btnDuyetYC;
         private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.Button btnQLDiemHD;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Button btnClose;

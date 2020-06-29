@@ -18,8 +18,8 @@ namespace SE_15_DTO
         public Nullable<int> IDSinhVien { get; set; }
         public string IDHoatDong { get; set; }
         public Nullable<System.DateTime> ThoiGianDangKy { get; set; }
-        public Nullable<System.DateTime> ThoiGianHuyDangKy { get; set; }
         public string TrangThai { get; set; }
+        public Nullable<System.DateTime> ThoiGianHuyDangKy { get; set; }
     
         public virtual HoatDong HoatDong { get; set; }
         public virtual SinhVien SinhVien { get; set; }

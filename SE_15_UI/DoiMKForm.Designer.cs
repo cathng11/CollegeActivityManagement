@@ -39,10 +39,14 @@
             this.txtMKMoi2 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblOld = new System.Windows.Forms.Label();
+            this.lblNew = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,9 +97,10 @@
             this.btnSave.Location = new System.Drawing.Point(319, 40);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(113, 28);
-            this.btnSave.TabIndex = 30;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnThoat
             // 
@@ -108,7 +113,7 @@
             this.btnThoat.Location = new System.Drawing.Point(577, 40);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(113, 28);
-            this.btnThoat.TabIndex = 29;
+            this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -122,8 +127,9 @@
             this.txtMKCu.Location = new System.Drawing.Point(279, 0);
             this.txtMKCu.Margin = new System.Windows.Forms.Padding(0);
             this.txtMKCu.Name = "txtMKCu";
+            this.txtMKCu.PasswordChar = '*';
             this.txtMKCu.Size = new System.Drawing.Size(280, 22);
-            this.txtMKCu.TabIndex = 23;
+            this.txtMKCu.TabIndex = 0;
             // 
             // txtMKMoi
             // 
@@ -134,8 +140,9 @@
             this.txtMKMoi.Location = new System.Drawing.Point(279, 105);
             this.txtMKMoi.Margin = new System.Windows.Forms.Padding(0);
             this.txtMKMoi.Name = "txtMKMoi";
+            this.txtMKMoi.PasswordChar = '*';
             this.txtMKMoi.Size = new System.Drawing.Size(280, 22);
-            this.txtMKMoi.TabIndex = 24;
+            this.txtMKMoi.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -167,8 +174,9 @@
             this.txtMKMoi2.Location = new System.Drawing.Point(279, 210);
             this.txtMKMoi2.Margin = new System.Windows.Forms.Padding(0);
             this.txtMKMoi2.Name = "txtMKMoi2";
+            this.txtMKMoi2.PasswordChar = '*';
             this.txtMKMoi2.Size = new System.Drawing.Size(280, 22);
-            this.txtMKMoi2.TabIndex = 25;
+            this.txtMKMoi2.TabIndex = 2;
             // 
             // tableLayoutPanel2
             // 
@@ -193,6 +201,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.94059F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.78218F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel1, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 2, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -201,6 +210,47 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.33045F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1010, 463);
             this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.lblOld, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.lblNew, 0, 2);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(789, 142);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 3;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(221, 321);
+            this.tableLayoutPanel5.TabIndex = 33;
+            // 
+            // lblOld
+            // 
+            this.lblOld.AutoSize = true;
+            this.lblOld.ForeColor = System.Drawing.Color.Maroon;
+            this.lblOld.Location = new System.Drawing.Point(3, 8);
+            this.lblOld.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+            this.lblOld.Name = "lblOld";
+            this.lblOld.Size = new System.Drawing.Size(113, 13);
+            this.lblOld.TabIndex = 33;
+            this.lblOld.Text = "Mật khẩu không đúng";
+            this.lblOld.Visible = false;
+            // 
+            // lblNew
+            // 
+            this.lblNew.AutoSize = true;
+            this.lblNew.ForeColor = System.Drawing.Color.Maroon;
+            this.lblNew.Location = new System.Drawing.Point(3, 222);
+            this.lblNew.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+            this.lblNew.Name = "lblNew";
+            this.lblNew.Size = new System.Drawing.Size(112, 13);
+            this.lblNew.TabIndex = 32;
+            this.lblNew.Text = "Mật khẩu không khớp";
+            this.lblNew.Visible = false;
             // 
             // tableLayoutPanel4
             // 
@@ -222,6 +272,7 @@
             // 
             // DoiMKForm
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
@@ -234,6 +285,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -252,5 +305,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label lblOld;
+        private System.Windows.Forms.Label lblNew;
     }
 }
