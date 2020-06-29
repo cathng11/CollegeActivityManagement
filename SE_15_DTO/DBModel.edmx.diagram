@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0f8757806b0442fbbfd5dafc6052ae46" Name="Diagram1">
+      <Diagram DiagramId="0f8757806b0442fbbfd5dafc6052ae46" Name="Diagram1" ZoomLevel="71">
         <EntityTypeShape EntityType="SE_15Model.Admin" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SE_15Model.DangKy" Width="1.5" PointX="12.75" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SE_15Model.HoatDong" Width="1.5" PointX="7.5" PointY="6.25" IsExpanded="true" />
@@ -22,7 +22,6 @@
         <AssociationConnector Association="SE_15Model.FK__SinhVien__IDKhoa__49C3F6B7" ManuallyRouted="false" />
         <AssociationConnector Association="SE_15Model.fk_Khoa_IDTaiKhoan" ManuallyRouted="false" />
         <AssociationConnector Association="SE_15Model.FK__LichSuDan__IDTai__59FA5E80" ManuallyRouted="false" />
-        <AssociationConnector Association="SE_15Model.fk_LichSu_IDTaiKhoan" ManuallyRouted="false" />
         <AssociationConnector Association="SE_15Model.FK__TaiKhoan__IDLoai__3B75D760" ManuallyRouted="false" />
         <AssociationConnector Association="SE_15Model.fk_SinhVien_IDTaiKhoan" ManuallyRouted="false" />
       </Diagram>

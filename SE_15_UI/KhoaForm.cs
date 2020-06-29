@@ -118,6 +118,7 @@ namespace SE_15_UI
         //Replace: Thay thế các ký tự cũ bằng các ký tự mới
         //Normalize: bình thường hóa chuỗi, loại bỏ dấu của chuỗi unicode 
         //ToLower Trả về chuỗi chữ thường
+
         public string stripunicode(string inputtext)
         {
             StringBuilder stringBuilder = new StringBuilder();

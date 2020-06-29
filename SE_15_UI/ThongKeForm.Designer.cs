@@ -204,6 +204,7 @@
             this.dtgvHoatDong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
             this.dtgvHoatDong.Location = new System.Drawing.Point(0, 0);
             this.dtgvHoatDong.Name = "dtgvHoatDong";
+            this.dtgvHoatDong.ReadOnly = true;
             this.dtgvHoatDong.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
@@ -226,6 +227,7 @@
             this.Column1.DataPropertyName = "IDHoatDong";
             this.Column1.HeaderText = "ID hoạt động";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 132;
             // 
             // Column2
@@ -233,6 +235,7 @@
             this.Column2.DataPropertyName = "LoaiHoatDong";
             this.Column2.HeaderText = "Loại hoạt động";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 147;
             // 
             // Column3
@@ -240,6 +243,7 @@
             this.Column3.DataPropertyName = "TenKhoa";
             this.Column3.HeaderText = "Khoa";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 73;
             // 
             // Column4
@@ -247,6 +251,7 @@
             this.Column4.DataPropertyName = "TenHoatDong";
             this.Column4.HeaderText = "Tên hoạt động";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 142;
             // 
             // Column5
@@ -254,6 +259,7 @@
             this.Column5.DataPropertyName = "SoLuongThamGia";
             this.Column5.HeaderText = "Số lượng tham gia";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 173;
             // 
             // Column6
@@ -261,6 +267,7 @@
             this.Column6.DataPropertyName = "ThoiGian";
             this.Column6.HeaderText = "Thời gian";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Width = 104;
             // 
             // Column7
@@ -268,6 +275,7 @@
             this.Column7.DataPropertyName = "DiaDiem";
             this.Column7.HeaderText = "Địa điểm";
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             this.Column7.Width = 101;
             // 
             // Column8
@@ -275,6 +283,7 @@
             this.Column8.DataPropertyName = "ChiPhi";
             this.Column8.HeaderText = "Chi phí";
             this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             this.Column8.Width = 86;
             // 
             // Column9
@@ -282,6 +291,7 @@
             this.Column9.DataPropertyName = "DiemHD";
             this.Column9.HeaderText = "Điểm";
             this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             this.Column9.Width = 74;
             // 
             // Column10
@@ -289,6 +299,7 @@
             this.Column10.DataPropertyName = "TrangThaiPheDuyet";
             this.Column10.HeaderText = "Trạng thái phê duyệt";
             this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             this.Column10.Width = 190;
             // 
             // Column11
@@ -296,6 +307,7 @@
             this.Column11.DataPropertyName = "TrangThaiDangKy";
             this.Column11.HeaderText = "Trạng thái đăng ký";
             this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             this.Column11.Width = 173;
             // 
             // tableLayoutPanel4

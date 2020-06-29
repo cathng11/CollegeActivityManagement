@@ -10,6 +10,8 @@ namespace SE_15_DTO
     {
         public string IDHoatDong { get; set; }
         public string TenHoatDong { get; set; }
+        public string TrangThaiPheDuyet { get; set; }
+        public string TrangThaiDangKy { get; set; }
         public Nullable<int> IDSinhVien { get; set; }
         public Nullable<DateTime> ThoiGian { get; set; }
         public Nullable<int> IDDangKy { get; set; }

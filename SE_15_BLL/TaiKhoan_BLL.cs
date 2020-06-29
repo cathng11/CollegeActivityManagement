@@ -129,12 +129,12 @@ namespace SE_15_BLL
             }
         }
 
-        public void Edit_BLL(TaiKhoan oldTK, TaiKhoan newTK)
+        public void Edit_BLL(string oldTK, TaiKhoan newTK)
         {
             try
             {
                 SE_15Entities sE_15Entities = new SE_15Entities();
-                TaiKhoan tk = sE_15Entities.TaiKhoans.Where(t => t.IDTaiKhoan == oldTK.IDTaiKhoan).FirstOrDefault();
+                TaiKhoan tk = sE_15Entities.TaiKhoans.Where(t => t.IDTaiKhoan == oldTK).FirstOrDefault();
                 tk.TenDangNhap = newTK.TenDangNhap;
                 sE_15Entities.SaveChanges();
             }

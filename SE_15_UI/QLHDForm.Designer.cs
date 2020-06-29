@@ -262,6 +262,7 @@
             this.dtgvHoatDong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvHoatDong.Size = new System.Drawing.Size(796, 523);
             this.dtgvHoatDong.TabIndex = 3;
+            this.dtgvHoatDong.SelectionChanged += new System.EventHandler(this.dtgvHoatDong_SelectionChanged);
             // 
             // Column1
             // 

@@ -40,6 +40,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpThoiGian = new System.Windows.Forms.DateTimePicker();
+            this.txtChiPhi = new System.Windows.Forms.NumericUpDown();
+            this.txtSoLuongSV = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,6 +52,7 @@
             this.txtTenHD = new System.Windows.Forms.TextBox();
             this.cbbLoaiHD = new System.Windows.Forms.ComboBox();
             this.txtIDHoatDong = new System.Windows.Forms.TextBox();
+            this.txtDiemHD = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.txtYeuCauSV = new System.Windows.Forms.TextBox();
@@ -60,19 +63,16 @@
             this.cbbDangKy = new System.Windows.Forms.ComboBox();
             this.cbbPheDuyet = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtDiemHD = new System.Windows.Forms.NumericUpDown();
-            this.txtChiPhi = new System.Windows.Forms.NumericUpDown();
-            this.txtSoLuongSV = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             this.layoutButton.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChiPhi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongSV)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHD)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -198,9 +198,9 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(3, 64);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(127, 21);
+            this.label10.Size = new System.Drawing.Size(139, 42);
             this.label10.TabIndex = 33;
-            this.label10.Text = "Chi phí dự tính";
+            this.label10.Text = "Chi phí dự tính (đồng/sinh viên)";
             // 
             // txtDiaDiem
             // 
@@ -258,6 +258,40 @@
             this.dtpThoiGian.Name = "dtpThoiGian";
             this.dtpThoiGian.Size = new System.Drawing.Size(285, 29);
             this.dtpThoiGian.TabIndex = 3;
+            // 
+            // txtChiPhi
+            // 
+            this.txtChiPhi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
+            this.txtChiPhi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtChiPhi.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChiPhi.Location = new System.Drawing.Point(169, 64);
+            this.txtChiPhi.Margin = new System.Windows.Forms.Padding(0);
+            this.txtChiPhi.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtChiPhi.Name = "txtChiPhi";
+            this.txtChiPhi.Size = new System.Drawing.Size(285, 29);
+            this.txtChiPhi.TabIndex = 35;
+            // 
+            // txtSoLuongSV
+            // 
+            this.txtSoLuongSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
+            this.txtSoLuongSV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtSoLuongSV.Enabled = false;
+            this.txtSoLuongSV.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuongSV.Location = new System.Drawing.Point(169, 0);
+            this.txtSoLuongSV.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSoLuongSV.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtSoLuongSV.Name = "txtSoLuongSV";
+            this.txtSoLuongSV.ReadOnly = true;
+            this.txtSoLuongSV.Size = new System.Drawing.Size(285, 29);
+            this.txtSoLuongSV.TabIndex = 36;
             // 
             // tableLayoutPanel4
             // 
@@ -394,6 +428,22 @@
             this.txtIDHoatDong.Name = "txtIDHoatDong";
             this.txtIDHoatDong.Size = new System.Drawing.Size(278, 22);
             this.txtIDHoatDong.TabIndex = 0;
+            // 
+            // txtDiemHD
+            // 
+            this.txtDiemHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
+            this.txtDiemHD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtDiemHD.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.txtDiemHD.Location = new System.Drawing.Point(170, 244);
+            this.txtDiemHD.Margin = new System.Windows.Forms.Padding(0);
+            this.txtDiemHD.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txtDiemHD.Name = "txtDiemHD";
+            this.txtDiemHD.Size = new System.Drawing.Size(278, 29);
+            this.txtDiemHD.TabIndex = 31;
             // 
             // tableLayoutPanel6
             // 
@@ -536,54 +586,6 @@
             this.label12.TabIndex = 35;
             this.label12.Text = "Trạng thái đăng ký";
             // 
-            // txtDiemHD
-            // 
-            this.txtDiemHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
-            this.txtDiemHD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtDiemHD.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.txtDiemHD.Location = new System.Drawing.Point(170, 244);
-            this.txtDiemHD.Margin = new System.Windows.Forms.Padding(0);
-            this.txtDiemHD.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.txtDiemHD.Name = "txtDiemHD";
-            this.txtDiemHD.Size = new System.Drawing.Size(278, 29);
-            this.txtDiemHD.TabIndex = 31;
-            // 
-            // txtChiPhi
-            // 
-            this.txtChiPhi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
-            this.txtChiPhi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtChiPhi.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChiPhi.Location = new System.Drawing.Point(169, 64);
-            this.txtChiPhi.Margin = new System.Windows.Forms.Padding(0);
-            this.txtChiPhi.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.txtChiPhi.Name = "txtChiPhi";
-            this.txtChiPhi.Size = new System.Drawing.Size(285, 29);
-            this.txtChiPhi.TabIndex = 35;
-            // 
-            // txtSoLuongSV
-            // 
-            this.txtSoLuongSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
-            this.txtSoLuongSV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtSoLuongSV.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuongSV.Location = new System.Drawing.Point(169, 0);
-            this.txtSoLuongSV.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSoLuongSV.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.txtSoLuongSV.Name = "txtSoLuongSV";
-            this.txtSoLuongSV.Size = new System.Drawing.Size(285, 29);
-            this.txtSoLuongSV.TabIndex = 36;
-            // 
             // HoatDongForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -599,15 +601,15 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChiPhi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongSV)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHD)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtChiPhi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongSV)).EndInit();
             this.ResumeLayout(false);
 
         }

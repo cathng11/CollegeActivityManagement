@@ -98,7 +98,7 @@
           <Property Name="MatKhau" Type="nvarchar" MaxLength="50" />
           <Property Name="IDLoaiTaiKhoan" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <Association Name="FK__HoatDong__IDKhoa__5165187F">
+        <Association Name="FK__HoatDong__IDKhoa__3F115E1A">
           <End Role="Khoa" Type="Self.Khoa" Multiplicity="0..1" />
           <End Role="HoatDong" Type="Self.HoatDong" Multiplicity="*" />
           <ReferentialConstraint>
@@ -110,7 +110,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__HoatDong__IDLoai__5070F446">
+        <Association Name="FK__HoatDong__IDLoai__3E1D39E1">
           <End Role="LoaiHoatDong" Type="Self.LoaiHoatDong" Multiplicity="0..1" />
           <End Role="HoatDong" Type="Self.HoatDong" Multiplicity="*" />
           <ReferentialConstraint>
@@ -122,7 +122,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__LichSuDan__IDTai__59FA5E80">
+        <Association Name="FK__LichSuDan__IDTai__489AC854">
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
           <End Role="LichSuDangNhap" Type="Self.LichSuDangNhap" Multiplicity="*" />
           <ReferentialConstraint>
@@ -134,7 +134,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SinhVien__IDKhoa__49C3F6B7">
+        <Association Name="FK__SinhVien__IDKhoa__395884C4">
           <End Role="Khoa" Type="Self.Khoa" Multiplicity="0..1" />
           <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="*" />
           <ReferentialConstraint>
@@ -146,7 +146,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TaiKhoan__IDLoai__3B75D760">
+        <Association Name="FK__TaiKhoan__IDLoai__2B0A656D">
           <End Role="LoaiTaiKhoan" Type="Self.LoaiTaiKhoan" Multiplicity="0..1" />
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -252,23 +252,23 @@
           <EntitySet Name="LoaiTaiKhoan" EntityType="Self.LoaiTaiKhoan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SinhVien" EntityType="Self.SinhVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__HoatDong__IDKhoa__5165187F" Association="Self.FK__HoatDong__IDKhoa__5165187F">
+          <AssociationSet Name="FK__HoatDong__IDKhoa__3F115E1A" Association="Self.FK__HoatDong__IDKhoa__3F115E1A">
             <End Role="Khoa" EntitySet="Khoa" />
             <End Role="HoatDong" EntitySet="HoatDong" />
           </AssociationSet>
-          <AssociationSet Name="FK__HoatDong__IDLoai__5070F446" Association="Self.FK__HoatDong__IDLoai__5070F446">
+          <AssociationSet Name="FK__HoatDong__IDLoai__3E1D39E1" Association="Self.FK__HoatDong__IDLoai__3E1D39E1">
             <End Role="LoaiHoatDong" EntitySet="LoaiHoatDong" />
             <End Role="HoatDong" EntitySet="HoatDong" />
           </AssociationSet>
-          <AssociationSet Name="FK__LichSuDan__IDTai__59FA5E80" Association="Self.FK__LichSuDan__IDTai__59FA5E80">
+          <AssociationSet Name="FK__LichSuDan__IDTai__489AC854" Association="Self.FK__LichSuDan__IDTai__489AC854">
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
             <End Role="LichSuDangNhap" EntitySet="LichSuDangNhap" />
           </AssociationSet>
-          <AssociationSet Name="FK__SinhVien__IDKhoa__49C3F6B7" Association="Self.FK__SinhVien__IDKhoa__49C3F6B7">
+          <AssociationSet Name="FK__SinhVien__IDKhoa__395884C4" Association="Self.FK__SinhVien__IDKhoa__395884C4">
             <End Role="Khoa" EntitySet="Khoa" />
             <End Role="SinhVien" EntitySet="SinhVien" />
           </AssociationSet>
-          <AssociationSet Name="FK__TaiKhoan__IDLoai__3B75D760" Association="Self.FK__TaiKhoan__IDLoai__3B75D760">
+          <AssociationSet Name="FK__TaiKhoan__IDLoai__2B0A656D" Association="Self.FK__TaiKhoan__IDLoai__2B0A656D">
             <End Role="LoaiTaiKhoan" EntitySet="LoaiTaiKhoan" />
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
           </AssociationSet>
@@ -364,7 +364,6 @@
           <Property Name="IDTaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ThoiGianDangNhap" Type="DateTime" Precision="3" />
           <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__LichSuDan__IDTai__59FA5E80" FromRole="LichSuDangNhap" ToRole="TaiKhoan" />
-          <NavigationProperty Name="TaiKhoan1" Relationship="Self.fk_LichSu_IDTaiKhoan" FromRole="LichSuDangNhap" ToRole="TaiKhoan" />
         </EntityType>
         <EntityType Name="LoaiHoatDong">
           <Key>
@@ -412,7 +411,6 @@
           <NavigationProperty Name="Admins" Relationship="Self.fk_Admin_IDTaiKhoan" FromRole="TaiKhoan" ToRole="Admin" />
           <NavigationProperty Name="Khoas" Relationship="Self.fk_Khoa_IDTaiKhoan" FromRole="TaiKhoan" ToRole="Khoa" />
           <NavigationProperty Name="LichSuDangNhaps" Relationship="Self.FK__LichSuDan__IDTai__59FA5E80" FromRole="TaiKhoan" ToRole="LichSuDangNhap" />
-          <NavigationProperty Name="LichSuDangNhaps1" Relationship="Self.fk_LichSu_IDTaiKhoan" FromRole="TaiKhoan" ToRole="LichSuDangNhap" />
           <NavigationProperty Name="LoaiTaiKhoan" Relationship="Self.FK__TaiKhoan__IDLoai__3B75D760" FromRole="TaiKhoan" ToRole="LoaiTaiKhoan" />
           <NavigationProperty Name="SinhViens" Relationship="Self.fk_SinhVien_IDTaiKhoan" FromRole="TaiKhoan" ToRole="SinhVien" />
         </EntityType>
@@ -520,20 +518,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_LichSu_IDTaiKhoan">
-          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="LichSuDangNhap" Type="Self.LichSuDangNhap" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TaiKhoan">
-              <PropertyRef Name="IDTaiKhoan" />
-            </Principal>
-            <Dependent Role="LichSuDangNhap">
-              <PropertyRef Name="IDTaiKhoan" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__TaiKhoan__IDLoai__3B75D760">
           <End Role="LoaiTaiKhoan" Type="Self.LoaiTaiKhoan" Multiplicity="0..1" />
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
@@ -599,10 +583,6 @@
             <End Role="Khoa" EntitySet="Khoas" />
           </AssociationSet>
           <AssociationSet Name="FK__LichSuDan__IDTai__59FA5E80" Association="Self.FK__LichSuDan__IDTai__59FA5E80">
-            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
-            <End Role="LichSuDangNhap" EntitySet="LichSuDangNhaps" />
-          </AssociationSet>
-          <AssociationSet Name="fk_LichSu_IDTaiKhoan" Association="Self.fk_LichSu_IDTaiKhoan">
             <End Role="TaiKhoan" EntitySet="TaiKhoans" />
             <End Role="LichSuDangNhap" EntitySet="LichSuDangNhaps" />
           </AssociationSet>

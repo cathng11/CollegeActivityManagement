@@ -16,11 +16,11 @@ namespace SE_15_UI
     {
         public delegate void MyDel(Form form);
         private MyDel _D;
-
         public MyDel D { get => _D; set => _D = value; }
-        public string IDTaiKhoan { get => _IDTaiKhoan; set => _IDTaiKhoan = value; }
 
         private string _IDTaiKhoan;
+        public string IDTaiKhoan { get => _IDTaiKhoan; set => _IDTaiKhoan = value; }
+
         public DoiMKForm(string id)
         {
             IDTaiKhoan = id;

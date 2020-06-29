@@ -411,6 +411,7 @@
             // 
             this.txtDiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
             this.txtDiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtDiem.Enabled = false;
             this.txtDiem.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.txtDiem.Location = new System.Drawing.Point(149, 276);
             this.txtDiem.Margin = new System.Windows.Forms.Padding(0);
@@ -420,6 +421,7 @@
             0,
             0});
             this.txtDiem.Name = "txtDiem";
+            this.txtDiem.ReadOnly = true;
             this.txtDiem.Size = new System.Drawing.Size(299, 29);
             this.txtDiem.TabIndex = 23;
             // 

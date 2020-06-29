@@ -19,6 +19,5 @@ namespace SE_15_DTO
         public Nullable<System.DateTime> ThoiGianDangNhap { get; set; }
     
         public virtual TaiKhoan TaiKhoan { get; set; }
-        public virtual TaiKhoan TaiKhoan1 { get; set; }
     }
 }
