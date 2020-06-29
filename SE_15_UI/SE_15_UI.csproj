@@ -34,10 +34,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\SE_15_BLL\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\SE_15_BLL\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="SE_15_BLL">
+      <HintPath>..\SE_15_BLL\bin\Debug\SE_15_BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="SE_15_DTO">
+      <HintPath>..\SE_15_BLL\bin\Debug\SE_15_DTO.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -7,23 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SE_15_DAL
+namespace SE_15_DTO
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class LoaiTaiKhoan
+    public partial class LoaiHoatDong
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public LoaiTaiKhoan()
+        public LoaiHoatDong()
         {
-            this.TaiKhoans = new HashSet<TaiKhoan>();
+            this.HoatDongs = new HashSet<HoatDong>();
         }
     
-        public string IDLoaiTaiKhoan { get; set; }
-        public string TenLoai { get; set; }
+        public int IDLoaiHoatDong { get; set; }
+        public string LoaiHoatDong1 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TaiKhoan> TaiKhoans { get; set; }
+        public virtual ICollection<HoatDong> HoatDongs { get; set; }
     }
 }

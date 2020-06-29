@@ -24,11 +24,11 @@ namespace SE_15_UI
             if (loginform.SuccessLogin)
             {
                 if (loginform.TypeUser == "UserAdmin")
-                    Application.Run(new DashboardForm(loginform.TypeUser));
+                    Application.Run(new DashboardForm(loginform.TypeUser, ""));
                 if (loginform.TypeUser == "UserSinhVien")
-                    Application.Run(new DashboardForm(loginform.TypeUser));
+                    Application.Run(new DashboardForm(loginform.TypeUser, ""));
                 if (loginform.TypeUser == "UserKhoa")
-                    Application.Run(new DashboardForm(loginform.TypeUser));
+                    Application.Run(new DashboardForm(loginform.TypeUser, ""));
             }
         }
            

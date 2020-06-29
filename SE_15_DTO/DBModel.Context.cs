@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SE_15_DAL
+namespace SE_15_DTO
 {
     using System;
     using System.Data.Entity;

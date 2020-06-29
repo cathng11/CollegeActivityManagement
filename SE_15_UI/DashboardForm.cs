@@ -12,11 +12,19 @@ namespace SE_15_UI
 {
     public partial class DashboardForm : Form
     {
-        public DashboardForm(string typeUser)
+        private string _TypeUser;
+        public string TypeUser { get => _TypeUser; set => _TypeUser = value; }
+
+        private string _ID_TK;
+        public string ID_TK { get => _ID_TK; set => _ID_TK = value; }
+
+        public DashboardForm(string typeUser, string id_TK)
         {
+            TypeUser = typeUser;
+            ID_TK = id_TK;
             InitializeComponent();
-            //SetView_Khoa();
-            //SetView_SV();
+            if (typeUser == "UserAdmin")
+                //SetView_Admin();
             if (typeUser == "UserKhoa")
                 SetView_Khoa();
             if (typeUser == "UserSinhVien")
@@ -48,17 +56,47 @@ namespace SE_15_UI
             //panelButton.SetRow(btnQLDiemHD, 3);
         }
 
-        private Form childForm = null;
+        public Form childForm = null;
+        private Form thaotacForm = null;
+
         public void openForm(Form child)
         {
-            childForm = child;
-            child.TopLevel = false;
-            child.FormBorderStyle = FormBorderStyle.None;
-            panelChildForm.Controls.Add(child);
-            child.Dock = DockStyle.Fill;
-            panelChildForm.Tag = child;
-            child.BringToFront();
-            child.Show();
+            if (childForm == null)
+            {
+                childForm = child;
+                child.TopLevel = false;
+                child.FormBorderStyle = FormBorderStyle.None;
+                panelChildForm.Controls.Add(child);
+                child.Dock = DockStyle.Fill;
+                panelChildForm.Tag = child;
+                child.BringToFront();
+                child.Show();
+            }
+            else
+            {
+                thaotacForm = child;
+                child.TopLevel = false;
+                child.FormBorderStyle = FormBorderStyle.None;
+                panelChildForm.Controls.Add(child);
+                child.Dock = DockStyle.Fill;
+                panelChildForm.Tag = child;
+                child.BringToFront();
+                child.Show();
+            }
+        }
+
+        private void CloseAllForms()
+        {
+            if (childForm != null)
+            {
+                childForm.Close();
+                childForm = null;
+            }
+            if (thaotacForm != null)
+            {
+                thaotacForm.Close();
+                thaotacForm = null;
+            }
         }
 
         private void SelectedButton(Button b)
@@ -88,18 +126,19 @@ namespace SE_15_UI
 
         private void btnQLHD_Click(object sender, EventArgs e)
         {
-            //tableLayoutPanel1.GetCellPosition(panelChildForm)
             lbButton.Text = "Quản lý hoạt động";
+            CloseAllForms();
             SelectedButton((Button)sender);
-            openForm(new QLHDForm());
+            openForm(new QLHDForm(TypeUser, null));
         }
 
 
         private void btnQLTKhoan_Click(object sender, EventArgs e)
         {
             lbButton.Text = "Quản lý tài khoản";
+            CloseAllForms();
             SelectedButton((Button)sender);
-            openForm(new QLTKForm());
+            openForm(new QLTKForm(TypeUser));
         }
 
         private void btnQLSV_Click(object sender, EventArgs e)
