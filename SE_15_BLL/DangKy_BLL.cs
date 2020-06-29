@@ -29,7 +29,7 @@ namespace SE_15_BLL
 
         }
 
-        public List<DangKy_DTO> GetListDK_BLL(int idKhoa,int idsv)
+        public List<DangKy_DTO> GetListDK_BLL(int idKhoa, int idsv)
         {
             try
             {
@@ -43,6 +43,8 @@ namespace SE_15_BLL
                             {
                                 IDHoatDong = hd.IDHoatDong,
                                 TenHoatDong = hd.TenHoatDong,
+                                TrangThaiPheDuyet=hd.TrangThaiPheDuyet,
+                                TrangThaiDangKy=hd.TrangThaiDangKy,
                                 IDSinhVien = dk.IDSinhVien,
                                 ThoiGian = hd.ThoiGian,
                                 IDDangKy = dk.IDDangKy,
@@ -50,7 +52,9 @@ namespace SE_15_BLL
                                 ThoiGianDangKy = dk.ThoiGianDangKy,
                                 ThoiGianHuyDangKy = dk.ThoiGianHuyDangKy
                             }).ToList();
-                list.RemoveAll(sv => sv.IDSinhVien != null && sv.IDSinhVien != idsv);
+                list.RemoveAll(hd => hd.TrangThaiPheDuyet != "Đã duyệt");
+                list.RemoveAll(sv => sv.IDSinhVien != null && sv.IDSinhVien !=idsv );
+
                 return list;
             }
             catch (Exception)

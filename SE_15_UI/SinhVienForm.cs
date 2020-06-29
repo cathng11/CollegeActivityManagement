@@ -22,8 +22,8 @@ namespace SE_15_UI
         private Nullable<int> _IDSinhVien;
         public Nullable<int> IDSinhVien { get => _IDSinhVien; set => _IDSinhVien = value; }
 
-        private string typeUser;
-        public string TypeUser { get => typeUser; set => typeUser = value; }
+        private string _TypeUser;
+        public string TypeUser { get => _TypeUser; set => _TypeUser = value; }
 
         public SinhVienForm(Nullable<int> id,string typeUser)
         {
@@ -45,8 +45,6 @@ namespace SE_15_UI
         }
         public void SetView()
         {
-
-            txtDiem.ReadOnly = true;
             if (IDSinhVien == null)
             {
                 foreach (TextBox i in this.tableLayoutPanel2.Controls.OfType<TextBox>())
@@ -65,7 +63,7 @@ namespace SE_15_UI
                 {
                     cbbKhoa.Enabled = false;
                 }
-                if (typeUser == "UserSinhVien") txtDiem.ReadOnly = true;
+                if (TypeUser == "UserSinhVien") txtDiem.ReadOnly = true;
                 grBTaiKhoan.Enabled = false;
                 SinhVien sv = SinhVien_BLL.Instance.ShowSV_BLL(IDSinhVien.Value);
                 txtIDSinhVien.Text = sv.IDSinhVien.ToString();
@@ -216,7 +214,7 @@ namespace SE_15_UI
                     if (radioButton_Nam.Checked == true) sv.GioiTinh = true;
                     else sv.GioiTinh = false;
                     SinhVien_BLL.Instance.UpdateSV_BLL(sv);
-                    if (typeUser == "UserSinhVien")
+                    if (TypeUser == "UserSinhVien")
                         MessageBox.Show("Đã lưu thông tin");
                     else CloseForm();
                 }

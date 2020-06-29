@@ -18,14 +18,14 @@ namespace SE_15_UI
         private MyDel _D;
         public MyDel D { get => _D; set => _D = value; }
 
-        private string typeUser;
-        public string TypeUser { get => typeUser; set => typeUser = value; }
+        private string _TypeUser;
+        public string TypeUser { get => _TypeUser; set => _TypeUser = value; }
 
         public QLTKForm(string typeUser)
         {
             TypeUser = typeUser;
             InitializeComponent();
-            if (typeUser == "UserKhoa" || typeUser == "UserSinhVien")
+            if (TypeUser == "UserKhoa" || TypeUser == "UserSinhVien")
                 SetView_Khoa_SV();
             SetCBBLoaiTK();
             ShowTaiKhoan();
@@ -92,7 +92,6 @@ namespace SE_15_UI
                 {
                     cbbLoaiTK.Items.Add(item);
                 }
-                //cbbLoaiTK.DisplayMember = "TenLoai";
             }
             else if (TypeUser == "UserKhoa")
             {
@@ -100,7 +99,6 @@ namespace SE_15_UI
                 {
                     if (item.TenLoai != "Admin") cbbLoaiTK.Items.Add(item);
                 }
-                //cbbLoaiTK.DisplayMember = "TenLoai";
             }
             else
             {

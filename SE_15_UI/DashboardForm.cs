@@ -14,8 +14,8 @@ namespace SE_15_UI
 {
     public partial class DashboardForm : Form
     {
-        private string typeUser;
-        public string TypeUser { get => typeUser; set => typeUser = value; }
+        private string _TypeUser;
+        public string TypeUser { get => _TypeUser; set => _TypeUser = value; }
 
         private string _ID_TK;
         public string ID_TK { get => _ID_TK; set => _ID_TK = value; }
@@ -223,7 +223,7 @@ namespace SE_15_UI
 
         private void DashboardForm_Shown(object sender, EventArgs e)
         {
-            if (typeUser == "UserAdmin")
+            if (TypeUser == "UserAdmin")
             {
                 int count = DuyetYC_BLL.Instance.GetListYC_BLL().Count;
                 MessageBox.Show("Có " + count + " yêu cầu cần phê duyệt!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

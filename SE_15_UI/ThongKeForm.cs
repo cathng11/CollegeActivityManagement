@@ -70,6 +70,7 @@ namespace SE_15_UI
             if (TypeUser == "UserAdmin")
             {
                 dtgvHoatDong.DataSource = HoatDong_BLL.Instance.GetALL_BLL();
+
             }
             else if (TypeUser == "UserKhoa")
             {
@@ -77,6 +78,7 @@ namespace SE_15_UI
                 Khoa khoa = Khoa_BLL.Instance.Get_ByTaiKhoan_BLL(dashboardForm.ID_TK);
                 dtgvHoatDong.DataSource = HoatDong_BLL.Instance.Get_ByKhoa_BLL(khoa.IDKhoa);
             }
+
         }
 
         private void btnSVThamGia_Click(object sender, EventArgs e)

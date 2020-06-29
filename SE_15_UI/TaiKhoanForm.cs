@@ -166,7 +166,7 @@ namespace SE_15_UI
                         IDLoaiTaiKhoan = ((LoaiTaiKhoan_DTO)cbbLoaiTK.SelectedItem).IDLoaiTaiKhoan,
                         MatKhau = tk.MatKhau
                     };
-                    TaiKhoan_BLL.Instance.Edit_BLL(tk, newTK);
+                    TaiKhoan_BLL.Instance.Edit_BLL(tk.IDTaiKhoan, newTK);
 
                     QLTKForm qLTKForm = (QLTKForm)Application.OpenForms["QLTKForm"];
                     D += qLTKForm.ShowTaiKhoan;

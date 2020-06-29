@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Vinh\Desktop\SE_15\TestInterface_DAL\DBModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\PC\OneDrive\Desktop\.NET\Đồ án 24_06_2020\SE_15\SE_15_DTO\DBModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

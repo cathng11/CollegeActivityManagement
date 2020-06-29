@@ -14,11 +14,11 @@ namespace SE_15_UI
 {
     public partial class LoginForm : Form
     {
-        private bool successLogin;
-        public bool SuccessLogin { get => successLogin; private set => successLogin = value; }
+        private bool _SuccessLogin;
+        public bool SuccessLogin { get => _SuccessLogin; private set => _SuccessLogin = value; }
 
-        private string typeUser;
-        public string TypeUser { get => typeUser; set => typeUser = value; }
+        private string _TypeUser;
+        public string TypeUser { get => _TypeUser; set => _TypeUser = value; }
 
         private string _ID_TK;
         public string ID_TK { get => _ID_TK; set => _ID_TK = value; }
