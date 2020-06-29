@@ -12,28 +12,22 @@ namespace TestInterface
 {
     public partial class QLTK : Form
     {
+        public delegate void MyDel(Form form);
+        private MyDel _D;
+
+        public MyDel D { get => _D; set => _D = value; }
         public QLTK()
         {
             InitializeComponent();
-            SetView();
+            SetView_Khoa_SV();
         }
 
-
-        private void SetView()
+        private void SetView_Khoa_SV()
         {
-            panel1.Height = this.Height * 15 / 100;
-            panelButton.Width = this.Width * 20 / 100;
-
-            foreach(Button b in this.panelButton.Controls.OfType<Button>())
-            {
-                b.Height = panelButton.Height * 20 / 100;
-                b.ImageAlign = ContentAlignment.MiddleCenter;
-                b.TextAlign = ContentAlignment.BottomCenter;
-                b.TextImageRelation = TextImageRelation.ImageAboveText;
-
-            }
-            lbLoaiTK.Location = new Point(panel1.Location.X + panel1.Width * 10 / 100, panel1.Location.Y + panel1.Height * 30 / 100);
-            cbbLoaiTK.Location = new Point(lbLoaiTK.Location.X + lbLoaiTK.Width + 10, lbLoaiTK.Location.Y);
+            btnXoa.Visible = false;
+            btnThem.Visible = false;
+            layoutButton.RowCount = 3;
+            layoutButton.SetRow(btnSua, 2);
         }
 
         private void SetPicture()
@@ -57,48 +51,47 @@ namespace TestInterface
             }
         }
 
-        private void QLTK_SizeChanged(object sender, EventArgs e)
+        private void QLTK1cs_SizeChanged(object sender, EventArgs e)
         {
-            SetView();
             SetPicture();
-        }
-        private void openChildForm(Form form)
-        {
-            form.TopLevel = false;
-            AdminForm admin = (AdminForm)Application.OpenForms["AdminForm"];
-            Panel panel = (Panel)admin.Controls["panelChildForm"];
-            form.Parent = admin;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            panel.Tag = form;
-            form.BringToFront();
-            panel.Controls.Add(form);
-            Close();
-            form.Width = this.Width;
-            form.Height = this.Height;
-            form.Show();
-        }
-        private void btnXem_Click(object sender, EventArgs e)
-        {
-            openChildForm(new TaiKhoan());
         }
 
         private void btnDoiMK_Click(object sender, EventArgs e)
         {
-            openChildForm(new DoiMK());
+            Admin admin = (Admin)Application.OpenForms["Admin"];
+            this.D = new MyDel(admin.openForm);
+            DoiMK mk = new DoiMK();
+            this.D(mk);
+        }
+
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+            Admin admin = (Admin)Application.OpenForms["Admin"];
+            this.D = new MyDel(admin.openForm);
+            TaiKhoan tk = new TaiKhoan();
+            tk.VisibleButtonSave();
+            this.D(tk);
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
 
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            openChildForm(new TaiKhoan());
-
+            Admin admin = (Admin)Application.OpenForms["Admin"];
+            this.D = new MyDel(admin.openForm);
+            TaiKhoan tk = new TaiKhoan();
+            this.D(tk);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            openChildForm(new TaiKhoan());
-
+            Admin admin = (Admin)Application.OpenForms["Admin"];
+            this.D = new MyDel(admin.openForm);
+            TaiKhoan tk = new TaiKhoan();
+            this.D(tk);
         }
     }
 }

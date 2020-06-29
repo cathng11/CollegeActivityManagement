@@ -10,20 +10,15 @@ using System.Windows.Forms;
 
 namespace TestInterface
 {
-    public partial class TaiKhoan : Form
+    public partial class Diem : Form
     {
         public delegate void MyDel(Form form);
         private MyDel _D;
 
         public MyDel D { get => _D; set => _D = value; }
-
-        public TaiKhoan()
+        public Diem()
         {
             InitializeComponent();
-        }
-        public void VisibleButtonSave()
-        {
-            btnSave.Visible = false;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

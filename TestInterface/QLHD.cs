@@ -16,34 +16,21 @@ namespace TestInterface
         private MyDel _D;
 
         public MyDel D { get => _D; set => _D = value; }
-
         public QLHD()
         {
             InitializeComponent();
-            SetView();
+            SetView_SV();
         }
 
-        private void QLHD_SizeChanged(object sender, EventArgs e)
+        private void SetView_SV()
         {
-            SetView();
-            SetPicture();
+            btnSua.Visible = false;
+            layoutButton.RowCount = 3;
+            btnTao.Text = "Đăng ký";
+            btnHuy.Text = "Hủy đăng ký";
+            layoutButton.SetRow(btnTao,2);
+            
         }
-        private void SetView()
-        {
-            panel1.Height = this.Height * 15 / 100;
-            panelButton.Width = this.Width * 20 / 100;
-            foreach (Button b in this.panelButton.Controls.OfType<Button>())
-            {
-                b.Height = panelButton.Height * 25 / 100;
-                b.ImageAlign = ContentAlignment.MiddleCenter;
-                b.TextAlign = ContentAlignment.BottomCenter;
-                b.TextImageRelation = TextImageRelation.ImageAboveText;
-
-            }
-            lbKhoa.Location = new Point(panel1.Location.X + panel1.Width * 10 / 100, panel1.Location.Y + panel1.Height * 30 / 100);
-            cbbKhoa.Location = new Point(lbKhoa.Location.X + lbKhoa.Width + 10, lbKhoa.Location.Y);
-        }
-
         private void SetPicture()
         {
             if (this.Width > (Screen.PrimaryScreen.Bounds.Width * 70 / 100))
@@ -61,51 +48,38 @@ namespace TestInterface
                 btnSua.Image = new Bitmap("Resource\\Edit32.png");
             }
         }
-        private void openChildForm(Form form)
+
+        private void QLHD1_SizeChanged(object sender, EventArgs e)
         {
-            form.TopLevel = false;
-            AdminForm admin = (AdminForm)Application.OpenForms["AdminForm"];
-            Panel panel = (Panel)admin.Controls["panelChildForm"];
-            form.Parent = admin;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            panel.Tag = form;
-            form.BringToFront();
-            panel.Controls.Add(form);
-            Close();
-            form.Width = this.Width;
-            form.Height = this.Height;
-            form.Show();
+            SetPicture();
         }
+
         private void btnXem_Click(object sender, EventArgs e)
         {
-            //HoatDong hd = new HoatDong();
-            //hd.VisibleButtonSave();
-            //this.openChildForm(hd);
-
-            AdminForm admin = (AdminForm)Application.OpenForms["AdminForm"];
-            this.D = new MyDel(admin.openChildForm);
+            Admin admin = (Admin)Application.OpenForms["Admin"];
+            this.D = new MyDel(admin.openForm);
             HoatDong hd = new HoatDong();
             hd.VisibleButtonSave();
             this.D(hd);
         }
 
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnTao_Click(object sender, EventArgs e)
         {
-            //this.openChildForm(new HoatDong());
-
-            AdminForm admin = (AdminForm)Application.OpenForms["AdminForm"];
-            this.D = new MyDel(admin.openChildForm);
+            Admin admin = (Admin)Application.OpenForms["Admin"];
+            this.D = new MyDel(admin.openForm);
             HoatDong hd = new HoatDong();
             this.D(hd);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            //this.openChildForm(new HoatDong());
-
-            AdminForm admin = (AdminForm)Application.OpenForms["AdminForm"];
-            this.D = new MyDel(admin.openChildForm);
+            Admin admin = (Admin)Application.OpenForms["Admin"];
+            this.D = new MyDel(admin.openForm);
             HoatDong hd = new HoatDong();
             this.D(hd);
         }

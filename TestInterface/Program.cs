@@ -23,9 +23,8 @@ namespace TestInterface
 
             if (loginform.SuccessLogin)
             {
-                Application.Run(new AdminForm());
+                Application.Run(new Admin());
             }
-            //Application.Run(new QLSV());
         }
            
     }
