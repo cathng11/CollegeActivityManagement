@@ -527,12 +527,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbUser;
-        private System.Windows.Forms.Label lbNameUser;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lbButton;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Label lbNameUser;
     }
 }

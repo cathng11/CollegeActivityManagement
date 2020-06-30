@@ -134,7 +134,6 @@ namespace SE_15_UI
         {
             if (txtIDHoatDong.Text == "") return false;
             if (txtTenHD.Text == "") return false;
-            if (txtSoLuongSV.Text == "") return false;
             if (txtChiPhi.Text == "") return false;
             if (txtDiaDiem.Text == "") return false;
             if (cbbLoaiHD.SelectedIndex < 0) return false;

@@ -215,7 +215,11 @@ namespace SE_15_UI
                     else sv.GioiTinh = false;
                     SinhVien_BLL.Instance.UpdateSV_BLL(sv);
                     if (TypeUser == "UserSinhVien")
+                    {
                         MessageBox.Show("Đã lưu thông tin");
+                        DashboardForm dashboardForm = (DashboardForm)Application.OpenForms["DashboardForm"];
+                        dashboardForm.lbNameUser.Text = sv.TenSinhVien;
+                    }
                     else CloseForm();
                 }
             }

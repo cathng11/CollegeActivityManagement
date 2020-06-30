@@ -35,19 +35,11 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SE_15_BLL\bin\Debug\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SE_15_BLL\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="SE_15_BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SE_15_BLL\bin\Debug\SE_15_BLL.dll</HintPath>
-    </Reference>
-    <Reference Include="SE_15_DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SE_15_BLL\bin\Debug\SE_15_DTO.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -256,6 +248,16 @@
     <Content Include="Resource\Increase64.png" />
     <Content Include="Resource\Read32.png" />
     <Content Include="Resource\Read64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SE_15_BLL\SE_15_BLL.csproj">
+      <Project>{c7c4ccab-b92a-49fe-b51b-2f3e2838cefc}</Project>
+      <Name>SE_15_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SE_15_DTO\SE_15_DTO.csproj">
+      <Project>{7c2f516f-8f93-4059-a956-18fb677ee27d}</Project>
+      <Name>SE_15_DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
