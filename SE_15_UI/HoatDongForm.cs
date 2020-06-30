@@ -32,16 +32,21 @@ namespace SE_15_UI
             InitializeComponent();
             LoadCBB();
             ShowData_HD();
+
             if(TypeUser=="UserKhoa")
             {
                 cbbPheDuyet.Enabled = false;
                 cbbDangKy.Enabled = false;
                 DashboardForm dashboardForm = (DashboardForm)Application.OpenForms["DashboardForm"];
                 Khoa khoa = Khoa_BLL.Instance.Get_ByTaiKhoan_BLL(dashboardForm.ID_TK);
-                ((Khoa_DTO)cbbTenKhoa.SelectedItem).TenKhoa = khoa.TenKhoa;
+                cbbTenKhoa.Text = khoa.TenKhoa;
                 cbbTenKhoa.Enabled = false;
-                if (HoatDong_BLL.Instance.Get_ByID_BLL(ID_HD).TrangThaiPheDuyet == "Đã duyệt")
-                    cbbDangKy.Enabled = true;
+
+                if (ID_HD != "")
+                {
+                    if (HoatDong_BLL.Instance.Get_ByID_BLL(ID_HD).TrangThaiPheDuyet == "Đã duyệt")
+                        cbbDangKy.Enabled = true;
+                }
             }
             else
             {
@@ -49,6 +54,7 @@ namespace SE_15_UI
                 cbbDangKy.SelectedIndex = 0;
             }
         }
+
         public void VisibleButtonSave()
         {
             btnSave.Visible = false;

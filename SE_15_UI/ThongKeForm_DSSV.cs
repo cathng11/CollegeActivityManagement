@@ -24,6 +24,7 @@ namespace SE_15_UI
             dtgvSVThamGia.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(87, 79, 125);
             dtgvSVThamGia.EnableHeadersVisualStyles = false;
             ShowSinhVien();
+            dtgvSVThamGia.Columns[0].Visible = false;
         }
 
         private void ShowSinhVien()

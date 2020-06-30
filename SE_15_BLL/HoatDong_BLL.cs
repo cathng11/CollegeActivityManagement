@@ -41,12 +41,12 @@ namespace SE_15_BLL
                     TenKhoa = hd.Khoa.TenKhoa,
                     TenHoatDong = hd.TenHoatDong,
                     SoLuongThamGia = hd.SoLuongThamGia,
-                    ThoiGian = hd.ThoiGian,
-                    DiaDiem = hd.DiaDiem,
-                    ChiPhi = hd.ChiPhi,
-                    DiemHD = hd.DiemHD,
-                    TrangThaiPheDuyet = hd.TrangThaiPheDuyet,
-                    TrangThaiDangKy = hd.TrangThaiDangKy
+                    //ThoiGian = hd.ThoiGian,
+                    //DiaDiem = hd.DiaDiem,
+                    //ChiPhi = hd.ChiPhi,
+                    //DiemHD = hd.DiemHD,
+                    //TrangThaiPheDuyet = hd.TrangThaiPheDuyet,
+                    //TrangThaiDangKy = hd.TrangThaiDangKy
                 }).ToList();
             }
             catch (Exception)
@@ -80,12 +80,12 @@ namespace SE_15_BLL
                     TenKhoa = hd.Khoa.TenKhoa,
                     TenHoatDong = hd.TenHoatDong,
                     SoLuongThamGia = hd.SoLuongThamGia,
-                    ThoiGian = hd.ThoiGian,
-                    DiaDiem = hd.DiaDiem,
-                    ChiPhi = hd.ChiPhi,
-                    DiemHD = hd.DiemHD,
-                    TrangThaiPheDuyet = hd.TrangThaiPheDuyet,
-                    TrangThaiDangKy = hd.TrangThaiDangKy
+                    //ThoiGian = hd.ThoiGian,
+                    //DiaDiem = hd.DiaDiem,
+                    //ChiPhi = hd.ChiPhi,
+                    //DiemHD = hd.DiemHD,
+                    //TrangThaiPheDuyet = hd.TrangThaiPheDuyet,
+                    //TrangThaiDangKy = hd.TrangThaiDangKy
                 }).ToList();
             }
             catch (Exception)
@@ -108,12 +108,12 @@ namespace SE_15_BLL
                         TenKhoa = hd.Khoa.TenKhoa,
                         TenHoatDong = hd.TenHoatDong,
                         SoLuongThamGia = hd.SoLuongThamGia,
-                        ThoiGian = hd.ThoiGian,
-                        DiaDiem = hd.DiaDiem,
-                        ChiPhi = hd.ChiPhi,
-                        DiemHD = hd.DiemHD,
-                        TrangThaiPheDuyet = hd.TrangThaiPheDuyet,
-                        TrangThaiDangKy = hd.TrangThaiDangKy
+                        //ThoiGian = hd.ThoiGian,
+                        //DiaDiem = hd.DiaDiem,
+                        //ChiPhi = hd.ChiPhi,
+                        //DiemHD = hd.DiemHD,
+                        //TrangThaiPheDuyet = hd.TrangThaiPheDuyet,
+                        //TrangThaiDangKy = hd.TrangThaiDangKy
                     }).ToList();
                 }
                 else

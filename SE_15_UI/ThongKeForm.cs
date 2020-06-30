@@ -27,6 +27,7 @@ namespace SE_15_UI
             InitializeComponent();
             SetCBBKhoa();
             ShowHoatDongs();
+            dtgvHoatDong.Columns[0].Visible = false;
         }
 
         private void SetPicture()

@@ -23,6 +23,7 @@ namespace SE_15_UI
             InitializeComponent();
             ShowKhoa();
             radioBtnNo.Checked = true;
+            dtgvKhoa.Columns["ID"].Visible = false;
         }
 
         private void QLKhoa1_SizeChanged(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace SE_15_UI
         private void btnXem_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection r = dtgvKhoa.SelectedRows;
-            KhoaForm khoa = new KhoaForm(Convert.ToInt32(r[0].Cells["Column1"].Value.ToString()));
+            KhoaForm khoa = new KhoaForm(Convert.ToInt32(r[0].Cells["ID"].Value.ToString()));
             khoa.VisibleButtonSave();
             DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
             this.D = new MyDel(df.openForm);
@@ -73,7 +74,7 @@ namespace SE_15_UI
             DataGridViewSelectedRowCollection r = dtgvKhoa.SelectedRows;
             DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
             this.D = new MyDel(df.openForm);
-            this.D(new KhoaForm(Convert.ToInt32(r[0].Cells["Column1"].Value.ToString())));
+            this.D(new KhoaForm(Convert.ToInt32(r[0].Cells["ID"].Value.ToString())));
         }
 
 

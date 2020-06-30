@@ -37,6 +37,7 @@ namespace SE_15_UI
             }
             SetCBBKhoa();
             ShowHoatDongs();
+            dtgvHoatDong.Columns["ID"].Visible = false;
         }
         private void SetView_SV()
         {
@@ -99,15 +100,18 @@ namespace SE_15_UI
 
             }
         }
+
         private void ResetDataGridView()
         {
             dtgvHoatDong.CancelEdit();
             dtgvHoatDong.Columns.Clear();
             dtgvHoatDong.DataSource = null;
         }
+
         private void SetData()
         {
             dtgvHoatDong.Columns[0].HeaderText = "ID";
+            dtgvHoatDong.Columns[0].Name = "ID";
             dtgvHoatDong.Columns[1].HeaderText = "Tên hoạt động";
             dtgvHoatDong.Columns[2].HeaderText = "Phê duyệt";
             dtgvHoatDong.Columns[3].HeaderText = "Đăng ký";
@@ -132,7 +136,7 @@ namespace SE_15_UI
             if (r.Count == 0) return;
             DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
             this.D = new MyDel(df.openForm);
-            HoatDongForm hd = new HoatDongForm(r[0].Cells[0].Value.ToString(), typeUser);
+            HoatDongForm hd = new HoatDongForm(r[0].Cells["ID"].Value.ToString(), typeUser);
             hd.VisibleButtonSave();
             this.D(hd);
         }
@@ -262,7 +266,7 @@ namespace SE_15_UI
                 if (cf.ConfirmSuccess)
                 {
                     DataGridViewSelectedRowCollection r = dtgvHoatDong.SelectedRows;
-                    HoatDong_BLL.Instance.Del_BLL(r[0].Cells["Column1"].Value.ToString());
+                    HoatDong_BLL.Instance.Del_BLL(r[0].Cells["ID"].Value.ToString());
                     ShowHoatDongs();
                     MessageBox.Show("Hủy thành công");
                 }
@@ -276,7 +280,7 @@ namespace SE_15_UI
 
             DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
             this.D = new MyDel(df.openForm);
-            HoatDongForm hd = new HoatDongForm(r[0].Cells[0].Value.ToString(), typeUser);
+            HoatDongForm hd = new HoatDongForm(r[0].Cells["ID"].Value.ToString(), typeUser);
             this.D(hd);
         }
 
@@ -347,18 +351,24 @@ namespace SE_15_UI
         {
             if(TypeUser=="UserSinhVien")
             {
-                if (dtgvHoatDong.CurrentRow.Cells["Đăng ký"].Value.ToString() == "Đóng đăng ký")
+                try
                 {
-                    btnTao.Enabled = false;
-                    btnHuy.Enabled = false;
+                    if (dtgvHoatDong.CurrentRow.Cells[3].Value.ToString() == "Đóng đăng ký")
+                    {
+                        btnTao.Enabled = false;
+                        btnHuy.Enabled = false;
+                    }
+                    else
+                    {
+                        btnTao.Enabled = true;
+                        btnHuy.Enabled = true;
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    btnTao.Enabled = true;
-                    btnHuy.Enabled = true;
+
                 }
             }
-
         }
     }
 }

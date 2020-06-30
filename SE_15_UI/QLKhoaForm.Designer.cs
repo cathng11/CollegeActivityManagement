@@ -41,10 +41,6 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvKhoa = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioBtnNo = new System.Windows.Forms.RadioButton();
@@ -52,6 +48,10 @@
             this.radioBtnAlpha = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSapXep = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.layoutButton.SuspendLayout();
@@ -198,7 +198,7 @@
             this.dtgvKhoa.ColumnHeadersHeight = 30;
             this.dtgvKhoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgvKhoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
+            this.ID,
             this.Column2,
             this.Column3,
             this.Column4});
@@ -233,34 +233,6 @@
             this.dtgvKhoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvKhoa.Size = new System.Drawing.Size(796, 523);
             this.dtgvKhoa.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "IDKhoa";
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "TenKhoa";
-            this.Column2.HeaderText = "Tên khoa";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "TenDangNhap";
-            this.Column3.HeaderText = "Tài khoản";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "SoLuongSV";
-            this.Column4.HeaderText = "Số lượng sinh viên";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // tableLayoutPanel4
             // 
@@ -363,6 +335,34 @@
             this.btnSapXep.UseVisualStyleBackColor = false;
             this.btnSapXep.Click += new System.EventHandler(this.btnSapXep_Click_1);
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "IDKhoa";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenKhoa";
+            this.Column2.HeaderText = "Tên khoa";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "TenDangNhap";
+            this.Column3.HeaderText = "Tài khoản";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "SoLuongSV";
+            this.Column4.HeaderText = "Số lượng sinh viên";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // QLKhoaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,13 +400,13 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dtgvKhoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btnSapXep;
         private System.Windows.Forms.RadioButton radioBtnNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
