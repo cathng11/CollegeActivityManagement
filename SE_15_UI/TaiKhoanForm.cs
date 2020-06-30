@@ -110,7 +110,6 @@ namespace SE_15_UI
             {
                 cbbLoaiTK.Items.Add(item);
             }
-            //cbbLoaiTK.DisplayMember = "TenLoai";
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -143,6 +142,7 @@ namespace SE_15_UI
                         MatKhau = ""
                     };
                     TaiKhoan_BLL.Instance.Add_BLL(newTK);
+                    MessageBox.Show("Thêm thành công");
 
                     QLTKForm qLTKForm = (QLTKForm)Application.OpenForms["QLTKForm"];
                     D += qLTKForm.ShowTaiKhoan;
@@ -167,6 +167,7 @@ namespace SE_15_UI
                         MatKhau = tk.MatKhau
                     };
                     TaiKhoan_BLL.Instance.Edit_BLL(tk.IDTaiKhoan, newTK);
+                    MessageBox.Show("Đã lưu thông tin");
 
                     QLTKForm qLTKForm = (QLTKForm)Application.OpenForms["QLTKForm"];
                     D += qLTKForm.ShowTaiKhoan;

@@ -41,9 +41,9 @@ namespace SE_15_UI
         private void SetPicture()
         {
             if (this.Width > (Screen.PrimaryScreen.Bounds.Width * 70 / 100))
-                btnXem.Image = new Bitmap("Resource\\Read64.png");
+                btnXem.Image = SE_15_UI.Properties.Resources.Read64;
             else
-                btnXem.Image = new Bitmap("Resource\\Read32.png");
+                btnXem.Image = SE_15_UI.Properties.Resources.Read32;
         }
         public void SetEmptyCells()
         {
@@ -76,8 +76,7 @@ namespace SE_15_UI
                 this.D(hd);
             }
         }
-
-        private void cbbKhoa_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbbKhoa_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (cbbKhoa.SelectedIndex == 0)
             {

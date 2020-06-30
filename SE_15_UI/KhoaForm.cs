@@ -66,7 +66,6 @@ namespace SE_15_UI
             if (txtSoLuongSV.Text == "") return false;
             return true;
         }
-
         public void SetMessageBox(string m)
         {
             MessageBox.Show(m, "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -163,7 +162,6 @@ namespace SE_15_UI
                         IDTaiKhoan = TaiKhoan_BLL.Instance.Get_ByUsername_BLL(txtTenTK.Text).IDTaiKhoan.ToString()
                     };
                     Khoa_BLL.Instance.UpdateKhoa_BLL(khoa);
-
 
                     QLKhoaForm qLKhoaForm = (QLKhoaForm)Application.OpenForms["QLKhoaForm"];
                     D += qLKhoaForm.ShowKhoa;

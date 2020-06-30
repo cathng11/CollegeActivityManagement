@@ -23,7 +23,6 @@ namespace SE_15_UI
             InitializeComponent();
             ShowKhoa();
             radioBtnNo.Checked = true;
-            //dtgvKhoa.Columns[0].Visible = false;
         }
 
         private void QLKhoa1_SizeChanged(object sender, EventArgs e)
@@ -35,15 +34,15 @@ namespace SE_15_UI
         {
             if (this.Width > (Screen.PrimaryScreen.Bounds.Width * 70 / 100))
             {
-                btnXem.Image = new Bitmap("Resource\\Read64.png");
-                btnThem.Image = new Bitmap("Resource\\Add64.png");
-                btnSua.Image = new Bitmap("Resource\\Edit64.png");
+                btnXem.Image = SE_15_UI.Properties.Resources.Read64;
+                btnThem.Image = SE_15_UI.Properties.Resources.Create64;
+                btnSua.Image = SE_15_UI.Properties.Resources.Edit64;
             }
             else
             {
-                btnXem.Image = new Bitmap("Resource\\Read32.png");
-                btnThem.Image = new Bitmap("Resource\\Add32.png");
-                btnSua.Image = new Bitmap("Resource\\Edit32.png");
+                btnXem.Image = SE_15_UI.Properties.Resources.Read32;
+                btnThem.Image = SE_15_UI.Properties.Resources.Create32;
+                btnSua.Image = SE_15_UI.Properties.Resources.Edit32;
             }
         }
 
