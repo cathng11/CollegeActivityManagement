@@ -23,6 +23,7 @@ namespace SE_15_UI
             InitializeComponent();
             SetCBB();
             ShowYeuCau();
+            dtgvPheDuyet.Columns["ID"].Visible = false;
         }
         public void SetCBB()
         {
@@ -47,15 +48,15 @@ namespace SE_15_UI
         }
         public void SetEmptyCells()
         {
-            foreach (DataGridViewRow r in dataGridView1.Rows)
+            foreach (DataGridViewRow r in dtgvPheDuyet.Rows)
             {
-                dataGridView1.Rows[r.Index].Cells["Column5"].Value = "Chưa duyệt";
-                dataGridView1.Rows[r.Index].Cells["Column6"].Value = "Đóng đăng ký";
+                dtgvPheDuyet.Rows[r.Index].Cells["Column5"].Value = "Chưa duyệt";
+                dtgvPheDuyet.Rows[r.Index].Cells["Column6"].Value = "Đóng đăng ký";
             }
         }
         public void ShowYeuCau()
         {
-            dataGridView1.DataSource = DuyetYC_BLL.Instance.GetListYC_BLL();
+            dtgvPheDuyet.DataSource = DuyetYC_BLL.Instance.GetListYC_BLL();
             SetEmptyCells();
         }
         private void btnXem_SizeChanged(object sender, EventArgs e)
@@ -65,13 +66,13 @@ namespace SE_15_UI
 
         private void btnXem_Click(object sender, EventArgs e)
         {
-            DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
+            DataGridViewSelectedRowCollection r = dtgvPheDuyet.SelectedRows;
             DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
             this.D = new MyDel(df.openForm);
             if (r.Count <= 0) MessageBox.Show("Chưa chọn yêu cầu cần duyệt!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                HoatDongForm hd = new HoatDongForm(r[0].Cells[0].Value.ToString(), "UserAdmin");
+                HoatDongForm hd = new HoatDongForm(r[0].Cells["ID"].Value.ToString(), "UserAdmin");
                 hd.D += new HoatDongForm.MyDel(ShowYeuCau);
                 this.D(hd);
             }
@@ -84,7 +85,7 @@ namespace SE_15_UI
             }
             else
             {
-                dataGridView1.DataSource = DuyetYC_BLL.Instance.GetListYC_ByKhoa_BLL(((Khoa_DTO)cbbKhoa.SelectedItem).IDKhoa);
+                dtgvPheDuyet.DataSource = DuyetYC_BLL.Instance.GetListYC_ByKhoa_BLL(((Khoa_DTO)cbbKhoa.SelectedItem).IDKhoa);
                 SetEmptyCells();
             }
         }
