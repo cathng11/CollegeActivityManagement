@@ -33,13 +33,13 @@ namespace SE_15_UI
         {
             if (this.Width > (Screen.PrimaryScreen.Bounds.Width * 70 / 100))
             {
-                btnSVThamGia.Image = new Bitmap("Resource\\Read64.png");
-                btnSoLuongSV.Image = new Bitmap("Resource\\Create64.png");
+                btnSVThamGia.Image = SE_15_UI.Properties.Resources.Read64;
+                btnSoLuongSV.Image = SE_15_UI.Properties.Resources.Create64;
             }
             else
             {
-                btnSVThamGia.Image = new Bitmap("Resource\\Read32.png");
-                btnSoLuongSV.Image = new Bitmap("Resource\\Create32.png");
+                btnSVThamGia.Image = SE_15_UI.Properties.Resources.Read32;
+                btnSoLuongSV.Image = SE_15_UI.Properties.Resources.Create32;
             }
         }
 
@@ -80,7 +80,6 @@ namespace SE_15_UI
             }
 
         }
-
         private void btnSVThamGia_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection r = dtgvHoatDong.SelectedRows;

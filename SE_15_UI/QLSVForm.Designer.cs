@@ -47,13 +47,17 @@
             this.lbKhoa = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.layoutButton.SuspendLayout();
@@ -206,7 +210,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LightSlateGray;
             this.dtgvSinhVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvSinhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgvSinhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvSinhVien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
             this.dtgvSinhVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -221,13 +225,17 @@
             this.dtgvSinhVien.ColumnHeadersHeight = 30;
             this.dtgvSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgvSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
+            this.Column1,
             this.Column2,
             this.Column3,
-            this.Column11,
             this.Column4,
+            this.Column5,
             this.Column6,
-            this.Column8});
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(173)))), ((int)(((byte)(190)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -340,13 +348,12 @@
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // ID
+            // Column1
             // 
-            this.ID.DataPropertyName = "IDSinhVien";
-            this.ID.HeaderText = "ID ";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 54;
+            this.Column1.DataPropertyName = "IDSinhVien";
+            this.Column1.HeaderText = "ID ";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
@@ -354,7 +361,6 @@
             this.Column2.HeaderText = "Họ và tên";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 106;
             // 
             // Column3
             // 
@@ -362,39 +368,62 @@
             this.Column3.HeaderText = "Khoa";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 73;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "TenDangNhap";
-            this.Column11.HeaderText = "Tài khoản";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 107;
             // 
             // Column4
             // 
-            this.Column4.DataPropertyName = "GioiTinh";
-            this.Column4.HeaderText = "Giới tính";
+            this.Column4.DataPropertyName = "TenDangNhap";
+            this.Column4.HeaderText = "Tài khoản";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 99;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "GioiTinh";
+            this.Column5.HeaderText = "Giới tính";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
-            this.Column6.DataPropertyName = "SoDienThoai";
-            this.Column6.HeaderText = "Số điện thoại";
+            this.Column6.DataPropertyName = "Email";
+            this.Column6.HeaderText = "Email";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 133;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "SoDienThoai";
+            this.Column7.HeaderText = "Số điện thoại";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // Column8
             // 
-            this.Column8.DataPropertyName = "NgaySinh";
-            this.Column8.HeaderText = "Ngày sinh";
+            this.Column8.DataPropertyName = "QueQuan";
+            this.Column8.HeaderText = "Quê quán";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 108;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "DiaChi";
+            this.Column9.HeaderText = "Địa chỉ";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "NgaySinh";
+            this.Column10.HeaderText = "Ngày sinh";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "TongDiemHoatDong";
+            this.Column11.HeaderText = "Điểm tích luỹ";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             // 
             // QLSVForm
             // 
@@ -434,12 +463,16 @@
         private System.Windows.Forms.DataGridView dtgvSinhVien;
         internal System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }

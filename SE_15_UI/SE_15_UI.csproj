@@ -236,6 +236,8 @@
   <ItemGroup>
     <Content Include="Resource\Add32.png" />
     <Content Include="Resource\Add64.png" />
+    <None Include="Resource\ChangePW32png.png" />
+    <None Include="Resource\ChangePW64.png" />
     <Content Include="Resource\Create32.png" />
     <Content Include="Resource\Create64.png" />
     <Content Include="Resource\Decrease32.png" />

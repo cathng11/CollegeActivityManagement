@@ -29,7 +29,6 @@ namespace SE_15_UI
                 SetView_Khoa_SV();
             SetCBBLoaiTK();
             ShowTaiKhoan();
-            //dtgvTaiKhoan.Columns[0].Visible = false;
         }
 
         private void SetView_Khoa_SV()
@@ -44,19 +43,20 @@ namespace SE_15_UI
         {
             if (this.Width > (Screen.PrimaryScreen.Bounds.Width * 70 / 100))
             {
-                btnXem.Image = new Bitmap("Resource\\Read64.png");
-                btnXoa.Image = new Bitmap("Resource\\Delete64.png");
-                btnThem.Image = new Bitmap("Resource\\Create64.png");
-                btnSua.Image = new Bitmap("Resource\\Edit64.png");
-                btnDoiMK.Image = new Bitmap("Resource\\ChangePW64.png");
+                btnXem.Image = SE_15_UI.Properties.Resources.Read64;
+                btnXoa.Image = SE_15_UI.Properties.Resources.Delete64;
+                btnThem.Image = SE_15_UI.Properties.Resources.Create64;
+                btnSua.Image = SE_15_UI.Properties.Resources.Edit64;
+                btnDoiMK.Image = SE_15_UI.Properties.Resources.ChangePW64;
             }
             else
             {
-                btnXem.Image = new Bitmap("Resource\\Read32.png");
-                btnXoa.Image = new Bitmap("Resource\\Delete32.png");
-                btnThem.Image = new Bitmap("Resource\\Create32.png");
-                btnSua.Image = new Bitmap("Resource\\Edit32.png");
-                btnDoiMK.Image = new Bitmap("Resource\\ChangePW32.png");
+                btnXem.Image = SE_15_UI.Properties.Resources.Read32;
+                btnXoa.Image = SE_15_UI.Properties.Resources.Delete32;
+                btnThem.Image = SE_15_UI.Properties.Resources.Create32;
+                btnSua.Image = SE_15_UI.Properties.Resources.Edit32;
+                btnDoiMK.Image = SE_15_UI.Properties.Resources.ChangePW32png;
+
             }
         }
 

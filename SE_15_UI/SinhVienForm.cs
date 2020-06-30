@@ -193,6 +193,7 @@ namespace SE_15_UI
                     {
                         sv.IDTaiKhoan = CreateTK(idtk);
                         SinhVien_BLL.Instance.AddSV_BLL(sv);
+                        MessageBox.Show("Thêm thành công!");
                         CloseForm();
                     }
                 }
@@ -214,9 +215,9 @@ namespace SE_15_UI
                     if (radioButton_Nam.Checked == true) sv.GioiTinh = true;
                     else sv.GioiTinh = false;
                     SinhVien_BLL.Instance.UpdateSV_BLL(sv);
+                    MessageBox.Show("Đã lưu thông tin");
                     if (TypeUser == "UserSinhVien")
                     {
-                        MessageBox.Show("Đã lưu thông tin");
                         DashboardForm dashboardForm = (DashboardForm)Application.OpenForms["DashboardForm"];
                         dashboardForm.lbNameUser.Text = sv.TenSinhVien;
                     }

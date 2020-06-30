@@ -37,7 +37,6 @@ namespace SE_15_UI
             }
             SetCBBKhoa();
             ShowHoatDongs();
-            //dtgvHoatDong.Columns[0].Visible = false;
         }
         private void SetView_SV()
         {
@@ -208,7 +207,7 @@ namespace SE_15_UI
                         };
                         DangKy_BLL.Instance.CancelDK_BLL(dk);
                     }
-
+                    MessageBox.Show("Đăng ký thành công!");
                     DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
                     this.D = new MyDel(df.openForm);
                     QLHDForm hd = new QLHDForm(TypeUser, IDSinhVien);
@@ -265,7 +264,7 @@ namespace SE_15_UI
                     DataGridViewSelectedRowCollection r = dtgvHoatDong.SelectedRows;
                     HoatDong_BLL.Instance.Del_BLL(r[0].Cells["Column1"].Value.ToString());
                     ShowHoatDongs();
-                    MessageBox.Show("Xoa/Huy thanh cong");
+                    MessageBox.Show("Hủy thành công");
                 }
             }
 
@@ -318,17 +317,17 @@ namespace SE_15_UI
         {
             if (this.Width > (Screen.PrimaryScreen.Bounds.Width * 70 / 100))
             {
-                btnXem.Image = new Bitmap("Resource\\Read64.png");
-                btnHuy.Image = new Bitmap("Resource\\Delete64.png");
-                btnTao.Image = new Bitmap("Resource\\Create64.png");
-                btnSua.Image = new Bitmap("Resource\\Edit64.png");
+                btnXem.Image = SE_15_UI.Properties.Resources.Read64;
+                btnHuy.Image = SE_15_UI.Properties.Resources.Delete64;
+                btnTao.Image = SE_15_UI.Properties.Resources.Create64;
+                btnSua.Image = SE_15_UI.Properties.Resources.Edit64;
             }
             else
             {
-                btnXem.Image = new Bitmap("Resource\\Read32.png");
-                btnHuy.Image = new Bitmap("Resource\\Delete32.png");
-                btnTao.Image = new Bitmap("Resource\\Create32.png");
-                btnSua.Image = new Bitmap("Resource\\Edit32.png");
+                btnXem.Image = SE_15_UI.Properties.Resources.Read32;
+                btnHuy.Image = SE_15_UI.Properties.Resources.Delete32;
+                btnTao.Image = SE_15_UI.Properties.Resources.Create32;
+                btnSua.Image = SE_15_UI.Properties.Resources.Edit32;
             }
         }
 
@@ -346,7 +345,7 @@ namespace SE_15_UI
 
         private void dtgvHoatDong_SelectionChanged(object sender, EventArgs e)
         {
-            if (TypeUser == "UserSinhVien")
+            if(TypeUser=="UserSinhVien")
             {
                 if (dtgvHoatDong.CurrentRow.Cells["Đăng ký"].Value.ToString() == "Đóng đăng ký")
                 {
@@ -359,6 +358,7 @@ namespace SE_15_UI
                     btnHuy.Enabled = true;
                 }
             }
+
         }
     }
 }
