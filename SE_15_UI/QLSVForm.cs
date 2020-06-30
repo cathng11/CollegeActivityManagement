@@ -93,12 +93,12 @@ namespace SE_15_UI
                 else
                 {
                     SinhVien sv = new SinhVien();
-                    sv.IDSinhVien = Convert.ToInt32(Convert.ToInt32(r[0].Cells["Column1"].Value));
+                    sv.IDSinhVien = Convert.ToInt32(Convert.ToInt32(r[0].Cells["ID"].Value));
                     SinhVien_BLL.Instance.DelSV_BLL(sv);
                     MessageBox.Show("Xóa/Hủy thành công!");
+                    dtgvSinhVien.DataSource = SinhVien_BLL.Instance.GetListSV_BLL().ToList();
                 }
             }
-            dtgvSinhVien.DataSource = SinhVien_BLL.Instance.GetListSV_BLL().ToList();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -118,7 +118,7 @@ namespace SE_15_UI
             if (r.Count != 1) MessageBox.Show("Chọn 1 sinh viên cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                SinhVienForm sv = new SinhVienForm(Convert.ToInt32(r[0].Cells["Column1"].Value), TypeUser);
+                SinhVienForm sv = new SinhVienForm(Convert.ToInt32(r[0].Cells["ID"].Value), TypeUser);
                 this.D(sv);
             }
         }

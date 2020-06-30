@@ -346,15 +346,18 @@ namespace SE_15_UI
 
         private void dtgvHoatDong_SelectionChanged(object sender, EventArgs e)
         {
-            if (dtgvHoatDong.CurrentRow.Cells[3].Value.ToString() == "Đóng đăng ký")
+            if (TypeUser == "UserSinhVien")
             {
-                btnTao.Enabled = false;
-                btnHuy.Enabled = false;
-            }
-            else
-            {
-                btnTao.Enabled = true;
-                btnHuy.Enabled = true;
+                if (dtgvHoatDong.CurrentRow.Cells["Đăng ký"].Value.ToString() == "Đóng đăng ký")
+                {
+                    btnTao.Enabled = false;
+                    btnHuy.Enabled = false;
+                }
+                else
+                {
+                    btnTao.Enabled = true;
+                    btnHuy.Enabled = true;
+                }
             }
         }
     }

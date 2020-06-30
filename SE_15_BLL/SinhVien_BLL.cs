@@ -53,12 +53,12 @@ namespace SE_15_BLL
                 TenKhoa = p.Khoa.TenKhoa,
                 TenDangNhap = p.TaiKhoan.TenDangNhap,
                 GioiTinh = (p.GioiTinh.Value) ? "Nam" : "Nữ",
-                Email = p.Email,
+                //Email = p.Email,
                 SoDienThoai = p.SoDienThoai,
-                QueQuan = p.QueQuan,
+                //QueQuan = p.QueQuan,
                 NgaySinh = p.NgaySinh,
-                DiaChi = p.DiaChi,
-                TongDiemHoatDong = p.TongDiemHoatDong
+                //DiaChi = p.DiaChi,
+                //TongDiemHoatDong = p.TongDiemHoatDong
             }).ToList();
             return list;
         }
@@ -127,12 +127,12 @@ namespace SE_15_BLL
                 TenKhoa = p.Khoa.TenKhoa,
                 TenDangNhap = p.TaiKhoan.TenDangNhap,
                 GioiTinh = (p.GioiTinh.Value) ? "Nam" : "Nữ",
-                Email = p.Email,
+                //Email = p.Email,
                 SoDienThoai = p.SoDienThoai,
-                QueQuan = p.QueQuan,
+                //QueQuan = p.QueQuan,
                 NgaySinh = p.NgaySinh,
-                DiaChi = p.DiaChi,
-                TongDiemHoatDong = p.TongDiemHoatDong
+                //DiaChi = p.DiaChi,
+                //TongDiemHoatDong = p.TongDiemHoatDong
             }).ToList();
             return list;
 
@@ -150,12 +150,12 @@ namespace SE_15_BLL
                         TenKhoa = p.Khoa.TenKhoa,
                         TenDangNhap = p.TaiKhoan.TenDangNhap,
                         GioiTinh = (p.GioiTinh.Value) ? "Nam" : "Nữ",
-                        Email = p.Email,
+                        //Email = p.Email,
                         SoDienThoai = p.SoDienThoai,
-                        QueQuan = p.QueQuan,
+                        //QueQuan = p.QueQuan,
                         NgaySinh = p.NgaySinh,
-                        DiaChi = p.DiaChi,
-                        TongDiemHoatDong = p.TongDiemHoatDong
+                        //DiaChi = p.DiaChi,
+                        //TongDiemHoatDong = p.TongDiemHoatDong
                     }).ToList();
                 return list;
 
@@ -171,12 +171,12 @@ namespace SE_15_BLL
                         TenKhoa = p.Khoa.TenKhoa,
                         TenDangNhap = p.TaiKhoan.TenDangNhap,
                         GioiTinh = (p.GioiTinh.Value) ? "Nam" : "Nữ",
-                        Email = p.Email,
+                        //Email = p.Email,
                         SoDienThoai = p.SoDienThoai,
-                        QueQuan = p.QueQuan,
+                        //QueQuan = p.QueQuan,
                         NgaySinh = p.NgaySinh,
-                        DiaChi = p.DiaChi,
-                        TongDiemHoatDong = p.TongDiemHoatDong
+                        //DiaChi = p.DiaChi,
+                        //TongDiemHoatDong = p.TongDiemHoatDong
                     }).ToList();
                 return list;
             }
@@ -205,12 +205,12 @@ namespace SE_15_BLL
                 TenKhoa = p.Khoa.TenKhoa,
                 TenDangNhap = p.TaiKhoan.TenDangNhap,
                 GioiTinh = (p.GioiTinh.Value) ? "Nam" : "Nữ",
-                Email = p.Email,
+                //Email = p.Email,
                 SoDienThoai = p.SoDienThoai,
-                QueQuan = p.QueQuan,
+                //QueQuan = p.QueQuan,
                 NgaySinh = p.NgaySinh,
-                DiaChi = p.DiaChi,
-                TongDiemHoatDong = p.TongDiemHoatDong
+                //DiaChi = p.DiaChi,
+                //TongDiemHoatDong = p.TongDiemHoatDong
             }).ToList();
         }
 
@@ -231,12 +231,12 @@ namespace SE_15_BLL
                             TenKhoa = sv.Khoa.TenKhoa,
                             TenDangNhap = sv.TaiKhoan.TenDangNhap,
                             GioiTinh = (sv.GioiTinh.Value) ? "Nam" : "Nữ",
-                            Email = sv.Email,
+                            //Email = sv.Email,
                             SoDienThoai = sv.SoDienThoai,
-                            QueQuan = sv.QueQuan,
+                            //QueQuan = sv.QueQuan,
                             NgaySinh = sv.NgaySinh,
-                            DiaChi = sv.DiaChi,
-                            TongDiemHoatDong = sv.TongDiemHoatDong
+                            //DiaChi = sv.DiaChi,
+                            //TongDiemHoatDong = sv.TongDiemHoatDong
                         }).ToList();
             }
             catch (Exception)
