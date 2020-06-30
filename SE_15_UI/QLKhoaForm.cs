@@ -23,6 +23,7 @@ namespace SE_15_UI
             InitializeComponent();
             ShowKhoa();
             radioBtnNo.Checked = true;
+            //dtgvKhoa.Columns[0].Visible = false;
         }
 
         private void QLKhoa1_SizeChanged(object sender, EventArgs e)

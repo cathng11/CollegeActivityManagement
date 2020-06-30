@@ -32,6 +32,7 @@ namespace SE_15_UI
             ShowSinhVien();
             if (typeUser == "UserKhoa") SetView_Khoa();
             SetCBB();
+            //dtgvSinhVien.Columns[0].Visible = false;
         }
 
         private void SetView_Khoa()
@@ -61,13 +62,13 @@ namespace SE_15_UI
 
         public void ShowSinhVien()
         {
-            if (TypeUser == "UserKhoa") dataGridView1.DataSource = SinhVien_BLL.Instance.GetSV_ByKhoa_BLL(ID_TK);
-            else dataGridView1.DataSource = SinhVien_BLL.Instance.GetListSV_BLL().ToList();
+            if (TypeUser == "UserKhoa") dtgvSinhVien.DataSource = SinhVien_BLL.Instance.GetSV_ByKhoa_BLL(ID_TK);
+            else dtgvSinhVien.DataSource = SinhVien_BLL.Instance.GetListSV_BLL().ToList();
         }
 
         private void btnXem_Click(object sender, EventArgs e)
         {
-            DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
+            DataGridViewSelectedRowCollection r = dtgvSinhVien.SelectedRows;
             if (r.Count <= 0) MessageBox.Show("Chưa chọn sinh viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
@@ -87,17 +88,17 @@ namespace SE_15_UI
             cf.ShowDialog();
             if (cf.ConfirmSuccess)
             {
-                DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
+                DataGridViewSelectedRowCollection r = dtgvSinhVien.SelectedRows;
                 if (r.Count != 1) MessageBox.Show("Chọn 1 sinh viên cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
                     SinhVien sv = new SinhVien();
                     sv.IDSinhVien = Convert.ToInt32(Convert.ToInt32(r[0].Cells["Column1"].Value));
                     SinhVien_BLL.Instance.DelSV_BLL(sv);
-                    //MessageBox.Show("Xoa/Huy thanh cong");
+                    MessageBox.Show("Xóa/Hủy thành công!");
                 }
             }
-            dataGridView1.DataSource = SinhVien_BLL.Instance.GetListSV_BLL().ToList();
+            dtgvSinhVien.DataSource = SinhVien_BLL.Instance.GetListSV_BLL().ToList();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -113,7 +114,7 @@ namespace SE_15_UI
             DashboardForm df = (DashboardForm)Application.OpenForms["DashboardForm"];
             this.D = new MyDel(df.openForm);
 
-            DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
+            DataGridViewSelectedRowCollection r = dtgvSinhVien.SelectedRows;
             if (r.Count != 1) MessageBox.Show("Chọn 1 sinh viên cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
@@ -129,7 +130,7 @@ namespace SE_15_UI
             if (tenKhoa == "All") searchKhoa = 0;
             else searchKhoa = Khoa_BLL.Instance.GetIDKhoa_BLL(tenKhoa);
             string searchTen = txtTimKiem.Text;
-            dataGridView1.DataSource = SinhVien_BLL.Instance.GetListSV_ByTenSV_BLL(searchKhoa, searchTen);
+            dtgvSinhVien.DataSource = SinhVien_BLL.Instance.GetListSV_ByTenSV_BLL(searchKhoa, searchTen);
 
         }
 
@@ -159,7 +160,7 @@ namespace SE_15_UI
             }
             else
             {
-                dataGridView1.DataSource = SinhVien_BLL.Instance.GetListSV_Where_BLL(((Khoa_DTO)cbbKhoa.SelectedItem).IDKhoa);
+                dtgvSinhVien.DataSource = SinhVien_BLL.Instance.GetListSV_Where_BLL(((Khoa_DTO)cbbKhoa.SelectedItem).IDKhoa);
             }
         }
     }

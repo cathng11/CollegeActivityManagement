@@ -29,6 +29,7 @@ namespace SE_15_UI
                 SetView_Khoa_SV();
             SetCBBLoaiTK();
             ShowTaiKhoan();
+            //dtgvTaiKhoan.Columns[0].Visible = false;
         }
 
         private void SetView_Khoa_SV()
