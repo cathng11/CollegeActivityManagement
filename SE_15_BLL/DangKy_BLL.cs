@@ -74,6 +74,19 @@ namespace SE_15_BLL
                 return null;
             }
         }
+
+        public List<DangKy_DTO> Get_ConstainName_BLL(string search_text, int idKhoa, int idsv)
+        {
+            try
+            {
+                return GetListDK_BLL(idKhoa, idsv).Where(dk => dk.TenHoatDong.Contains(search_text)).ToList();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public void AddDK_BLL(DangKy dk)
         {
             try
