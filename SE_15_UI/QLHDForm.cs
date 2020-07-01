@@ -314,19 +314,8 @@ namespace SE_15_UI
         {
             try
             {
-                if(TypeUser!="UserAdmin")
-                {
-                    int id_Khoa = ((Khoa_DTO)cbbKhoa.SelectedItem).IDKhoa;
-                    try
-                    {
-                        dtgvHoatDong.DataSource = HoatDong_BLL.Instance.Get_ConstainName_BLL(txtTimKiem.Text, id_Khoa);
-                    }
-                    catch (Exception)
-                    {
-                        dtgvHoatDong.DataSource = HoatDong_BLL.Instance.Get_ByKhoa_BLL(id_Khoa);
-                    }
-                }
-                else
+                int id_Khoa = ((Khoa_DTO)cbbKhoa.SelectedItem).IDKhoa;
+                if (TypeUser == "UserAdmin")
                 {
                     if (cbbKhoa.SelectedIndex == 0)
                     {
@@ -341,7 +330,6 @@ namespace SE_15_UI
                     }
                     else
                     {
-                        int id_Khoa = ((Khoa_DTO)cbbKhoa.SelectedItem).IDKhoa;
                         try
                         {
                             dtgvHoatDong.DataSource = HoatDong_BLL.Instance.Get_ConstainName_BLL(txtTimKiem.Text, id_Khoa);
@@ -352,7 +340,28 @@ namespace SE_15_UI
                         }
                     }
                 }
-
+                else if (TypeUser == "UserKhoa")
+                {
+                    try
+                    {
+                        dtgvHoatDong.DataSource = HoatDong_BLL.Instance.Get_ConstainName_BLL(txtTimKiem.Text, id_Khoa);
+                    }
+                    catch (Exception)
+                    {
+                        dtgvHoatDong.DataSource = HoatDong_BLL.Instance.Get_ByKhoa_BLL(id_Khoa);
+                    }
+                }
+                else if (TypeUser == "UserSinhVien")
+                {
+                    try
+                    {
+                        dtgvHoatDong.DataSource = DangKy_BLL.Instance.Get_ConstainName_BLL(txtTimKiem.Text, id_Khoa, IDSinhVien.Value);
+                    }
+                    catch (Exception)
+                    {
+                        dtgvHoatDong.DataSource = DangKy_BLL.Instance.GetListDK_BLL(id_Khoa, IDSinhVien.Value);
+                    }
+                }
             }
             catch (Exception)
             {

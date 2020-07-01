@@ -30,8 +30,8 @@ namespace SE_15_UI
             TypeUser = typeUser;
             InitializeComponent();
             ShowSinhVien();
-            if (typeUser == "UserKhoa") SetView_Khoa();
             SetCBB();
+            if (typeUser == "UserKhoa") SetView_Khoa();
             dtgvSinhVien.Columns["ID"].Visible = false;
         }
 
