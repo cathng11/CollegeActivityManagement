@@ -39,8 +39,9 @@ namespace SE_15_UI
                 cbbDangKy.Enabled = false;
                 DashboardForm dashboardForm = (DashboardForm)Application.OpenForms["DashboardForm"];
                 Khoa khoa = Khoa_BLL.Instance.Get_ByTaiKhoan_BLL(dashboardForm.ID_TK);
-                cbbTenKhoa.Text = khoa.TenKhoa;
+                cbbTenKhoa.Items.Add(new Khoa_DTO { IDKhoa = khoa.IDKhoa, TenKhoa = khoa.TenKhoa, SoLuongSV = khoa.SoLuongSV, TenDangNhap = khoa.TaiKhoan.TenDangNhap });
                 cbbTenKhoa.Enabled = false;
+                cbbTenKhoa.SelectedIndex = 0;
 
                 if (ID_HD != "")
                 {

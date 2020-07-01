@@ -25,7 +25,7 @@ namespace SE_15_UI
         private string _TypeUser;
         public string TypeUser { get => _TypeUser; set => _TypeUser = value; }
 
-        public SinhVienForm(Nullable<int> id,string typeUser)
+        public SinhVienForm(Nullable<int> id, string typeUser)
         {
             IDSinhVien = id;
             TypeUser = typeUser;
@@ -62,8 +62,8 @@ namespace SE_15_UI
                 if (TypeUser == "UserSinhVien" || TypeUser == "UserKhoa")
                 {
                     cbbKhoa.Enabled = false;
+                    txtDiem.Enabled = false;
                 }
-                if (TypeUser == "UserSinhVien") txtDiem.ReadOnly = true;
                 grBTaiKhoan.Enabled = false;
                 SinhVien sv = SinhVien_BLL.Instance.ShowSV_BLL(IDSinhVien.Value);
                 txtIDSinhVien.Text = sv.IDSinhVien.ToString();
@@ -96,7 +96,7 @@ namespace SE_15_UI
         {
             if (txtTenSV.Text == "") return false;
             if (txtEmail.Text.Length < 10) return false;
-            if (txtEmail.Text.Substring(txtEmail.Text.Length - 10) != "@gmail.com" && txtEmail.Text.Substring(txtEmail.Text.Length - 10) != "@email.com") 
+            if (txtEmail.Text.Substring(txtEmail.Text.Length - 10) != "@gmail.com" && txtEmail.Text.Substring(txtEmail.Text.Length - 10) != "@email.com")
                 return false;
             if (txtDiem.Text == "") return false;
             if (txtSDT.Text.Length < 10) return false;

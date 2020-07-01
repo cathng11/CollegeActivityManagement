@@ -43,7 +43,7 @@ namespace SE_15_UI
             btnXoa.Visible = false;
             string tenKhoa = Khoa_BLL.Instance.Get_ByTaiKhoan_BLL(ID_TK).TenKhoa.ToString();
             cbbKhoa.Text = tenKhoa;
-            cbbKhoa.Enabled = true;
+            cbbKhoa.Enabled = false;
         }
 
         public void SetCBB()
